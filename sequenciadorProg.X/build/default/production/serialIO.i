@@ -2504,10 +2504,11 @@ typedef union
 {
     struct
     {
-        unsigned char A :1;
-        unsigned char B :1;
-        unsigned char C :1;
+        unsigned char :4;
         unsigned char D :1;
+        unsigned char C :1;
+        unsigned char B :1;
+        unsigned char A :1;
     };
     unsigned char ABCD;
 } ATUADORESbits_t;
@@ -2539,13 +2540,13 @@ typedef union
 {
     struct
     {
-        unsigned char SHLD:1;
-        unsigned char CLK :1;
         unsigned char OUT :1;
-
+        unsigned char IN :1;
+        unsigned char CLK :1;
+        unsigned char SHLD:1;
     };
 } SERIALIObits_t;
-volatile SERIALIObits_t SERIALIO __attribute__((address(0x009)));
+volatile SERIALIObits_t SERIALIO __attribute__((address(0x005)));
 
 
 
@@ -2570,7 +2571,7 @@ unsigned char serialIObyteShift( unsigned char dataIn )
         else
             SERIALIO.OUT = 0;
 
-        if( PORTAbits.RA0 )
+        if( SERIALIO.IN)
             dataOut |= dataBit;
         SERIALIO.CLK = 1;
         dataBit >>= 1;
@@ -2599,29 +2600,29 @@ void initSerialIO( unsigned char * ptrIn, unsigned char * ptrOut, unsigned char 
     ptrSerialOut = ptrOut;
     lenSerialIO = length;
 
-    PORTEbits.RE0 = 0;
-    ANSELbits.ANS5 = 0;
-    TRISEbits.TRISE0 = 0;
+    PORTAbits.RA3 = 0;
+    ANSELbits.ANS3 = 0;
+    TRISAbits.TRISA3 = 0;
 
 
-    PORTEbits.RE1 = 0;
-    ANSELbits.ANS6 = 0;
-    TRISEbits.TRISE1 = 0;
+    PORTAbits.RA2 = 0;
+    ANSELbits.ANS2 = 0;
+    TRISAbits.TRISA2 = 0;
 
 
-    PORTEbits.RE2 = 0;
-    ANSELbits.ANS7 = 0;
-    TRISEbits.TRISE2 = 0;
-
-
-
-
+    PORTAbits.RA0 = 0;
     ANSELbits.ANS0 = 0;
-    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA0 = 0;
+
+
+    ANSELbits.ANS1 = 0;
+    TRISAbits.TRISA1 = 1;
 
 
 
     SERIALIO.CLK = 0;
     SERIALIO.OUT = 0;
     SERIALIO.SHLD = 1;
+
+
 }

@@ -2564,10 +2564,11 @@ typedef union
 {
     struct
     {
-        unsigned char A :1;
-        unsigned char B :1;
-        unsigned char C :1;
+        unsigned char :4;
         unsigned char D :1;
+        unsigned char C :1;
+        unsigned char B :1;
+        unsigned char A :1;
     };
     unsigned char ABCD;
 } ATUADORESbits_t;
@@ -2602,7 +2603,7 @@ void main(void)
     initLCD();
     initKeyboard();
     initSerialIO( &sensor, &atuador, 1 );
-
+    atuador.ABCD = 0x00;
     while( 1 )
     {
         keyboardScan();

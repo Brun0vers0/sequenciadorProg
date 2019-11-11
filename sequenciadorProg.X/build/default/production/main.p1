@@ -1,17 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"26 ./atuadores.h
-[; ;./atuadores.h: 26:     {
+"27 ./atuadores.h
+[; ;./atuadores.h: 27:     {
 [s S145 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S145 . A0 A1 B0 B1 C0 C1 D0 D1 ]
-"24
-[; ;./atuadores.h: 24: {
+"25
+[; ;./atuadores.h: 25: {
 [u S144 `S145 1 ]
 [n S144 . . ]
 "14
 [; ;./atuadores.h: 14:     {
-[s S143 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S143 . A B C D ]
+[s S143 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S143 . . D C B A ]
 "12
 [; ;./atuadores.h: 12: {
 [u S142 `S143 1 `uc 1 ]
@@ -344,6 +344,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [; ;main.c: 60:     initSerialIO( &sensor, &atuador, 1 );
 [e ( _initSerialIO (3 , , -> &U _sensor `*uc -> &U _atuador `*uc -> -> 1 `i `uc ]
+"61
+[; ;main.c: 61:     atuador.ABCD = 0x00;
+[e = . _atuador 1 -> -> 0 `i `uc ]
 "62
 [; ;main.c: 62:     while( 1 )
 [e :U 148 ]
@@ -530,7 +533,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 187 ]
 "108
 [; ;main.c: 108:                     atuador.A = 1;
-[e = . . _atuador 0 0 -> -> 1 `i `uc ]
+[e = . . _atuador 0 4 -> -> 1 `i `uc ]
 "109
 [; ;main.c: 109:                     estado = 101;
 [e = _estado -> 101 `i ]
@@ -555,7 +558,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 190 ]
 "116
 [; ;main.c: 116:                     atuador.B = 1;
-[e = . . _atuador 0 1 -> -> 1 `i `uc ]
+[e = . . _atuador 0 3 -> -> 1 `i `uc ]
 "117
 [; ;main.c: 117:                     estado = 111;
 [e = _estado -> 111 `i ]
@@ -605,7 +608,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 196 ]
 "132
 [; ;main.c: 132:                     atuador.D = 1;
-[e = . . _atuador 0 3 -> -> 1 `i `uc ]
+[e = . . _atuador 0 1 -> -> 1 `i `uc ]
 "133
 [; ;main.c: 133:                     estado = 131;
 [e = _estado -> 131 `i ]
@@ -819,7 +822,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 217 ]
 "204
 [; ;main.c: 204:                     atuador.A = 0;
-[e = . . _atuador 0 0 -> -> 0 `i `uc ]
+[e = . . _atuador 0 4 -> -> 0 `i `uc ]
 "205
 [; ;main.c: 205:                     estado = 231;
 [e = _estado -> 231 `i ]
@@ -844,7 +847,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 220 ]
 "212
 [; ;main.c: 212:                     atuador.B = 0;
-[e = . . _atuador 0 1 -> -> 0 `i `uc ]
+[e = . . _atuador 0 3 -> -> 0 `i `uc ]
 "213
 [; ;main.c: 213:                     estado = 241;
 [e = _estado -> 241 `i ]
@@ -894,7 +897,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 226 ]
 "228
 [; ;main.c: 228:                     atuador.D = 0;
-[e = . . _atuador 0 3 -> -> 0 `i `uc ]
+[e = . . _atuador 0 1 -> -> 0 `i `uc ]
 "229
 [; ;main.c: 229:                     estado = 261;
 [e = _estado -> 261 `i ]
