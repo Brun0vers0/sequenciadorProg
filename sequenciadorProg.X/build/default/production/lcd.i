@@ -1,4 +1,4 @@
-# 1 "atuadores.c"
+# 1 "lcd.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "atuadores.c" 2
+# 1 "lcd.c" 2
+
+
+
+
+
+
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
@@ -2492,7 +2498,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 2 "atuadores.c" 2
+# 8 "lcd.c" 2
 
 # 1 "./config.h" 1
 # 61 "./config.h"
@@ -2500,41 +2506,131 @@ extern __bank0 __bit __timeout;
 #pragma config WDTE = OFF
 #pragma config MCLRE = OFF
 #pragma config LVP = OFF
-# 3 "atuadores.c" 2
+# 9 "lcd.c" 2
 
-# 1 "./atuadores.h" 1
-# 11 "./atuadores.h"
+# 1 "./lcd.h" 1
+# 11 "./lcd.h"
 typedef union
 {
     struct
     {
-        unsigned char A :1;
-        unsigned char B :1;
-        unsigned char C :1;
-        unsigned char D :1;
+        unsigned char LO :4;
+        unsigned char HI :4;
     };
-    unsigned char ABCD;
-} ATUADORESbits_t;
+    unsigned char HILO;
+} REGnibble_t;
+
 
 typedef union
 {
     struct
     {
-        unsigned char A0 :1;
-        unsigned char A1 :1;
-        unsigned char B0 :1;
-        unsigned char B1 :1;
-        unsigned char C0 :1;
-        unsigned char C1 :1;
-        unsigned char D0 :1;
-        unsigned char D1 :1;
+        unsigned char BUS : 4;
+        unsigned char RS : 1;
+        unsigned char EN : 1;
+        unsigned char B0 : 1;
+        unsigned char B1 : 1;
     };
-} SENSORESbits_t;
-# 4 "atuadores.c" 2
+} LCDbits_t;
+# 73 "./lcd.h"
+void cmdLCD( unsigned char cmd );
+void putLCD( unsigned char c );
+void gotoxy( unsigned char x, unsigned char y );
+void writeLCD( unsigned char x, unsigned char y, const char * ptr );
+void initLCD( void );
+char lcdb0 (void);
+char lcdb1 (void);
+void clearLCD( void );
+# 10 "lcd.c" 2
 
-# 1 "./serialIO.h" 1
-# 11 "./serialIO.h"
-void initSerialIO( unsigned char * ptrIn, unsigned char * ptrOut, unsigned char length );
-void serialIOscan( void );
-# 5 "atuadores.c" 2
 
+
+volatile LCDbits_t LCD __attribute__((address(0x008)));
+
+void initLCD( void )
+    {
+        LCD.B0 = 0;
+        LCD.B1 = 0;
+        LCD.RS = 0;
+        LCD.BUS = 0x3;
+        LCD.EN = 1;
+        TRISD = 0xC0;
+
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+
+        cmdLCD(0x20);
+        cmdLCD(0x28);
+        cmdLCD(0x0C);
+        cmdLCD(0x01);
+        cmdLCD(0x02);
+
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+
+void cmdLCD( unsigned char cmd )
+{
+        volatile REGnibble_t nibble;
+
+        nibble.HILO = cmd;
+        LCD.RS = 0;
+        LCD.BUS = nibble.HI ;
+         LCD.EN = 0;
+        if( cmd == 0x01 || cmd == 0x02 )
+        _delay((unsigned long)((2)*(4000000/4000.0)));
+        else
+        _delay((unsigned long)((40)*(4000000/4000000.0)));
+        LCD.EN = 1;
+
+        if( cmd != (0x20) )
+    {
+       LCD.RS = 0;
+       LCD.BUS = nibble.LO;
+       LCD.EN = 0;
+       if( cmd == 0x01 || cmd == 0x02 )
+            _delay((unsigned long)((2)*(4000000/4000.0)));
+       else
+            _delay((unsigned long)((40)*(4000000/4000000.0)));
+       LCD.EN = 1;
+    }
+}
+void putLCD( unsigned char c )
+ {
+        volatile REGnibble_t nibble;
+
+        nibble.HILO = c;
+        LCD.RS = 1;
+        LCD.BUS= nibble.HI;
+        LCD.EN = 0;
+        _delay((unsigned long)((2)*(4000000/4000.0)));
+        LCD.EN = 1;
+
+        LCD.RS = 1;
+        LCD.BUS = nibble.LO;
+        LCD.EN = 0;
+        _delay((unsigned long)((2)*(4000000/4000.0)));
+        LCD.EN = 1;
+}
+void gotoxy( unsigned char x, unsigned char y )
+{
+        cmdLCD((0x80 | 0xC0 * y) + (x & 0X3F));
+}
+void writeLCD( unsigned char x, unsigned char y, const char * ptr )
+{
+        gotoxy(x,y);
+        while( *ptr )
+        putLCD( *ptr++ );
+}
+
+char lcdb0(void)
+{
+    return(LCD.B0);
+}
+char lcdb1(void)
+{
+    return(LCD.B1);
+}
+
+void clearLCD( void )
+{
+    cmdLCD(0x01);
+}
