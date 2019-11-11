@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=atuadores.c fifo.c keyboard.c lcd4bitBus.c main.c serialIO.c
+SOURCEFILES_QUOTED_IF_SPACED=atuadores.c fifo.c keyboard.c lcd.c lcd4bitBus.c main.c serialIO.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/atuadores.p1 ${OBJECTDIR}/fifo.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/lcd4bitBus.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/serialIO.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/atuadores.p1.d ${OBJECTDIR}/fifo.p1.d ${OBJECTDIR}/keyboard.p1.d ${OBJECTDIR}/lcd4bitBus.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/serialIO.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/atuadores.p1 ${OBJECTDIR}/fifo.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/lcd.p1 ${OBJECTDIR}/lcd4bitBus.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/serialIO.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/atuadores.p1.d ${OBJECTDIR}/fifo.p1.d ${OBJECTDIR}/keyboard.p1.d ${OBJECTDIR}/lcd.p1.d ${OBJECTDIR}/lcd4bitBus.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/serialIO.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/atuadores.p1 ${OBJECTDIR}/fifo.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/lcd4bitBus.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/serialIO.p1
+OBJECTFILES=${OBJECTDIR}/atuadores.p1 ${OBJECTDIR}/fifo.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/lcd.p1 ${OBJECTDIR}/lcd4bitBus.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/serialIO.p1
 
 # Source Files
-SOURCEFILES=atuadores.c fifo.c keyboard.c lcd4bitBus.c main.c serialIO.c
+SOURCEFILES=atuadores.c fifo.c keyboard.c lcd.c lcd4bitBus.c main.c serialIO.c
 
 
 CFLAGS=
@@ -114,6 +114,13 @@ ${OBJECTDIR}/keyboard.p1: keyboard.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/keyboard.p1 keyboard.c 
 	@${FIXDEPS} ${OBJECTDIR}/keyboard.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/lcd.p1: lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lcd.p1.d 
+	@${RM} ${OBJECTDIR}/lcd.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/lcd.p1 lcd.c 
+	@${FIXDEPS} ${OBJECTDIR}/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/lcd4bitBus.p1: lcd4bitBus.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/lcd4bitBus.p1.d 
@@ -156,6 +163,13 @@ ${OBJECTDIR}/keyboard.p1: keyboard.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/keyboard.p1 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/keyboard.p1 keyboard.c 
 	@${FIXDEPS} ${OBJECTDIR}/keyboard.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lcd.p1: lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lcd.p1.d 
+	@${RM} ${OBJECTDIR}/lcd.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/lcd.p1 lcd.c 
+	@${FIXDEPS} ${OBJECTDIR}/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/lcd4bitBus.p1: lcd4bitBus.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 

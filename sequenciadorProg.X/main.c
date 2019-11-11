@@ -38,7 +38,7 @@
 //***************** Bibliotecas
 #include <xc.h>
 #include "config.h"
-#include "lcd4bitBus.h"
+#include "lcd.h"
 #include "keyboard.h"
 #include "fifo.h"
 #include "serialIO.h"
@@ -53,6 +53,7 @@ void main(void)
     SENSORESbits_t sensor;
     ATUADORESbits_t atuador;
     int estado = 0;
+    
   
     initLCD();
     initKeyboard();
@@ -60,50 +61,48 @@ void main(void)
     
     while( 1 )                      // Laço de repetição infinita.
     {
-        
         keyboardScan();
-
         switch( estado )
         {
             case 0:
                     
                     break;
             case 10:
-                        rest = getFIFO();
-                        if( rest == 'A' )
-                            estado = 100;
-                        else if( rest == 'B' )
-                            estado = 110;
-                        else if( rest == 'C' )
-                            estado = 120;
-                        else if( rest == 'D' )
-                            estado = 130;
-                        else if( rest == '1' )
-                            estado = 140;
-                        else if( rest == '2' )
-                            estado = 150;
-                        else if( rest == '3' )
-                            estado = 160;
-                        else if( rest == '4' )
-                            estado = 170;
-                        else if( rest == '5' )
-                            estado = 180;
-                        else if( rest == '6' )
-                            estado = 190;
-                        else if( rest == '7' )
-                            estado = 200;
-                        else if( rest == '8' )
-                            estado = 210;
-                        else if( rest == '9' )
-                            estado = 220;
-                        else if( rest == 'a' )
-                            estado = 230;
-                        else if( rest == 'b' )
-                            estado = 240;
-                        else if( rest == 'c' )
-                            estado = 250;
-                        else if( rest == 'd' )
-                            estado = 260;
+                    rest = getFIFO();
+                    if( rest == 'A' )
+                        estado = 100;
+                    else if( rest == 'B' )
+                        estado = 110;
+                    else if( rest == 'C' )
+                        estado = 120;
+                    else if( rest == 'D' )
+                        estado = 130;
+                    else if( rest == '1' )
+                        estado = 140;
+                    else if( rest == '2' )
+                        estado = 150;
+                    else if( rest == '3' )
+                        estado = 160;
+                    else if( rest == '4' )
+                        estado = 170;
+                    else if( rest == '5' )
+                        estado = 180;
+                    else if( rest == '6' )
+                        estado = 190;
+                    else if( rest == '7' )
+                        estado = 200;
+                    else if( rest == '8' )
+                        estado = 210;
+                    else if( rest == '9' )
+                        estado = 220;
+                    else if( rest == 'a' )
+                        estado = 230;
+                    else if( rest == 'b' )
+                        estado = 240;
+                    else if( rest == 'c' )
+                        estado = 250;
+                    else if( rest == 'd' )
+                        estado = 260;
                     break;
             case 100: // A+
                     atuador.A = 1;
@@ -113,7 +112,7 @@ void main(void)
                     if( sensor.A1 == 1)
                         estado = 10;
                     break;
-            case 110:
+            case 110: // B+
                     atuador.B = 1;
                     estado = 111;
                     break;
@@ -121,7 +120,7 @@ void main(void)
                     if( sensor.B1 == 1)
                         estado = 10;
                     break;
-            case 120:
+            case 120: // C+
                     atuador.C = 1;
                     estado = 121;
                     break;
@@ -129,7 +128,7 @@ void main(void)
                     if( sensor.C1 == 1)
                         estado = 10;
                     break;
-            case 130:
+            case 130: // D+
                     atuador.D = 1;
                     estado = 131;
                     break;
@@ -302,8 +301,7 @@ void main(void)
                         estado = 10;
                         break;
             }
-            lcd(0,0, displayFIFO() );
-            
+            writeLCD(0,0, displayFIFO() );
         }
         serialIOscan();
     }

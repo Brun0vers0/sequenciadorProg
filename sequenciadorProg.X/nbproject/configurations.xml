@@ -8,6 +8,7 @@
       <itemPath>config.h</itemPath>
       <itemPath>fifo.h</itemPath>
       <itemPath>keyboard.h</itemPath>
+      <itemPath>lcd.h</itemPath>
       <itemPath>lcd4bitBus.h</itemPath>
       <itemPath>serialIO.h</itemPath>
     </logicalFolder>
@@ -21,6 +22,7 @@
       <itemPath>atuadores.c</itemPath>
       <itemPath>fifo.c</itemPath>
       <itemPath>keyboard.c</itemPath>
+      <itemPath>lcd.c</itemPath>
       <itemPath>lcd4bitBus.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>serialIO.c</itemPath>
@@ -33,6 +35,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../../teste1/sequenciadorProg/sequenciadorProg.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V2.00 build -1524193055 
-                                                                                               Tue Nov 05 15:53:07 2019
+                                                                                               Mon Nov 11 16:33:14 2019
 
 Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
      1  0000                     
@@ -1349,7 +1349,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1286                           __CFG_MCLRE$OFF equ 0x0
   1287  0000                     global __CFG_LVP$OFF
   1288                           __CFG_LVP$OFF equ 0x0
-  1289  0000                     	file	"C:\Users\18175218\AppData\Local\Temp\s13c."
+  1289  0000                     	file	"C:\Users\18175218\AppData\Local\Temp\s1d8."
   1290                           	line	#
   1291                           psect cinit,class=CODE,delta=2
   1292                           global start_initialization
@@ -1387,7 +1387,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1324                           _fifo:
   1325  0025                            ds      16
   1326  0025                     
-  1327                           	file	"C:\Users\18175218\AppData\Local\Temp\s13c."
+  1327                           	file	"C:\Users\18175218\AppData\Local\Temp\s1d8."
   1328                           	line	#
   1329                           psect clrtext,class=CODE,delta=2
   1330                           global clear_ram0
@@ -6593,7 +6593,7 @@ DATA                 0      0      30      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.00 build -1524193055 
-Symbol Table                                                                                   Tue Nov 05 15:53:07 2019
+Symbol Table                                                                                   Mon Nov 11 16:33:14 2019
 
               ?_displayFIFO 0070                           l9 00E6                           pc 0002  
                         l12 0121                          l13 0123                          l22 0136  
