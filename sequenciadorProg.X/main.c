@@ -53,12 +53,12 @@ void main(void)
     SENSORESbits_t sensor;
     ATUADORESbits_t atuador;
     int estado = 0;
-    
+
   
     initLCD();
     initKeyboard();
     initSerialIO(  &sensor, &atuador, 1 );
-    
+    atuador.ABCD = 0x00; 
     while( 1 )                      // Laço de repetição infinita.
     {
         keyboardScan();

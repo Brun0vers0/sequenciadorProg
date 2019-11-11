@@ -36,6 +36,7 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../../teste1/sequenciadorProg/sequenciadorProg.X</Elem>
+    <Elem>../../projetoOld/SequenciadorProgr_.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
