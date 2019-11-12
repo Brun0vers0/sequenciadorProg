@@ -2533,6 +2533,12 @@ void initLCD( void );
 char lcdb0 (void);
 char lcdb1 (void);
 void clearLCD( void );
+int checktecla (void);
+void screen_car (void);
+void screen_menu (void);
+
+extern const char indPassosSize;
+extern const char indicePassos[];
 # 42 "main.c" 2
 # 1 "./keyboard.h" 1
 
@@ -2564,11 +2570,11 @@ typedef union
 {
     struct
     {
-        unsigned char :4;
-        unsigned char D :1;
-        unsigned char C :1;
-        unsigned char B :1;
         unsigned char A :1;
+        unsigned char B :1;
+        unsigned char C :1;
+        unsigned char D :1;
+        unsigned char :4;
     };
     unsigned char ABCD;
 } ATUADORESbits_t;
@@ -2599,18 +2605,23 @@ void main(void)
     ATUADORESbits_t atuador;
     int estado = 0;
 
-
     initLCD();
+
     initKeyboard();
     initSerialIO( &sensor, &atuador, 1 );
     atuador.ABCD = 0x00;
+# 73 "main.c"
     while( 1 )
     {
+
+
+
+
         keyboardScan();
+
         switch( estado )
         {
             case 0:
-
                     break;
             case 10:
                     rest = getFIFO();
@@ -2782,6 +2793,7 @@ void main(void)
         if( currentKey() && !previousKey() )
         {
             tecla = currentKey();
+
             switch(tecla)
             {
                 case 'A':

@@ -2541,11 +2541,32 @@ void initLCD( void );
 char lcdb0 (void);
 char lcdb1 (void);
 void clearLCD( void );
+int checktecla (void);
+void screen_car (void);
+void screen_menu (void);
+
+extern const char indPassosSize;
+extern const char indicePassos[];
 # 10 "lcd.c" 2
+
+# 1 "./fifo.h" 1
+
+
+
+void putFIFO( unsigned char c );
+unsigned char getFIFO( void );
+unsigned char statusFIFO( void );
+void * displayFIFO( void );
+unsigned char delFIFO( unsigned char n );
+# 11 "lcd.c" 2
 
 
 
 volatile LCDbits_t LCD __attribute__((address(0x008)));
+
+const char indPassosSize = 5;
+const char indicePassos[] = {0,3,7,11,14};
+
 
 void initLCD( void )
     {
@@ -2633,4 +2654,45 @@ char lcdb1(void)
 void clearLCD( void )
 {
     cmdLCD(0x01);
+}
+
+
+int checktecla (void)
+{
+    char linha2[17] = "      [  ]      ";
+    char aux;
+            for( char i=0; i<indPassosSize; i++ )
+    {
+        aux = getFIFO();
+        if(aux>= '0' && aux<= '9')
+        {
+            linha2[i] = aux;
+            linha2[i+1] = 's';
+        }
+        else if( aux & 0x20 )
+        {
+            linha2[i] = aux & ~0x20;
+            linha2[i+1] = '-';
+        }
+        else if ( aux )
+        {
+            linha2[i] = aux;
+            linha2[i+1] = '+';
+        }
+            writeLCD(0,1,linha2);
+    }
+}
+
+void screen_car (void)
+{
+    writeLCD(2,0,"SEQUENCIADOR");
+    _delay((unsigned long)((200)*(4000000/4000.0)));
+    writeLCD(2,1,"PROGRAMAVEL");
+    _delay((unsigned long)((2000)*(4000000/4000.0)));
+    clearLCD();
+}
+
+void screen_menu (void)
+{
+    writeLCD(0,0,"INSIRA A SEQUEN.");
 }

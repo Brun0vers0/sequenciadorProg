@@ -54,18 +54,33 @@ void main(void)
     ATUADORESbits_t atuador;
     int estado = 0;
 
-  
     initLCD();
+    //screen_car();
     initKeyboard();
     initSerialIO(  &sensor, &atuador, 1 );
     atuador.ABCD = 0x00; 
+    
+//    while (1)  //programa de testes no hardware
+//    {
+//        atuador.ABCD = 0x00; serialIOscan(); __delay_ms(5000);
+//        atuador.ABCD = 0x01; serialIOscan(); __delay_ms(5000);
+//        atuador.ABCD = 0x0F; serialIOscan(); __delay_ms(5000);
+//        atuador.ABCD = 0x3F; serialIOscan(); __delay_ms(5000);
+//        atuador.ABCD = 0xFF; serialIOscan(); __delay_ms(5000);
+//    }    
+    
+    
     while( 1 )                      // Laço de repetição infinita.
     {
+        
+//            checktecla ();
+
+        
         keyboardScan();
+        //screen_menu ();
         switch( estado )
         {
             case 0:
-                    
                     break;
             case 10:
                     rest = getFIFO();
@@ -237,6 +252,7 @@ void main(void)
         if( currentKey() && !previousKey() )
         {
             tecla = currentKey();
+
             switch(tecla)
             {
                 case 'A':

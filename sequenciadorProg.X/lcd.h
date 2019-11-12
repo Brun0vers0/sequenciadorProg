@@ -78,6 +78,13 @@ void initLCD( void );
 char lcdb0 (void);
 char lcdb1 (void);
 void clearLCD( void );
+int checktecla (void);
+void screen_car (void);
+void screen_menu (void);
+
+extern const char indPassosSize;
+extern const char indicePassos[];
+
 
 #endif	/* LCD_H */
 
