@@ -8,6 +8,8 @@
 
 #include <xc.h>
 
+#include "fifo.h"
+
 #define FIFO_SIZE 16
 
 unsigned char fifo[FIFO_SIZE];
@@ -55,3 +57,9 @@ unsigned char delFIFO( unsigned char n )
     return( ret );
 }
 
+void resetFIFO (void)
+{
+    delFIFO(16);
+    fifoHead = 0;
+    fifoTail = 0;
+}

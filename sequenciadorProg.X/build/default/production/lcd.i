@@ -2558,6 +2558,7 @@ unsigned char getFIFO( void );
 unsigned char statusFIFO( void );
 void * displayFIFO( void );
 unsigned char delFIFO( unsigned char n );
+void resetFIFO (void);
 # 11 "lcd.c" 2
 
 

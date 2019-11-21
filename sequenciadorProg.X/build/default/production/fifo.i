@@ -2501,6 +2501,18 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
 # 10 "fifo.c" 2
 
+# 1 "./fifo.h" 1
+
+
+
+void putFIFO( unsigned char c );
+unsigned char getFIFO( void );
+unsigned char statusFIFO( void );
+void * displayFIFO( void );
+unsigned char delFIFO( unsigned char n );
+void resetFIFO (void);
+# 12 "fifo.c" 2
+
 
 
 unsigned char fifo[16];
@@ -2546,4 +2558,11 @@ unsigned char delFIFO( unsigned char n )
         --n;
     }
     return( ret );
+}
+
+void resetFIFO (void)
+{
+    delFIFO(16);
+    fifoHead = 0;
+    fifoTail = 0;
 }

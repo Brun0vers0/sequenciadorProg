@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\sequenciadorProg.X.production.sym \
   --cmf=dist/default/production\sequenciadorProg.X.production.cmf -z \
-  -Q16F887 -oC:\Users\18175218\AppData\Local\Temp\s5mo.2 \
+  -Q16F887 -oC:\Users\18175218\AppData\Local\Temp\sa98.2 \
   -Mdist/default/production/sequenciadorProg.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\18175218\AppData\Local\Temp\s5mo.o \
+  -DENTRY=2 -k C:\Users\18175218\AppData\Local\Temp\sa98.o \
   dist/default/production\sequenciadorProg.X.production.o 
 
 Object code version is 3.11
@@ -28,39 +28,42 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\18175218\AppData\Local\Temp\s5mo.o
+C:\Users\18175218\AppData\Local\Temp\sa98.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1     400E       0
 dist/default/production\sequenciadorProg.X.production.o
                 cinit                               7E5      7E5       1B      FCA       0
-                text18                              2CB      2CB       5F      596       0
-                text17                               E3       E3        7      1C6       0
-                text16                               D4       D4        5      1A8       0
-                text15                              168      168       21      2D0       0
-                text14                               D1       D1        3      1A2       0
-                text13                              14F      14F       19      29E       0
-                text12                              111      111       13      222       0
-                text11                              28C      28C       3F      518       0
-                text10                              1E7      1E7       34      3CE       0
-                text9                               32A      32A       7F      654       0
-                text8                                D9       D9        5      1B2       0
-                text7                                F2       F2        E      1E4       0
-                text6                               189      189       2B      312       0
-                text5                                DE       DE        5      1BC       0
-                text4                               24F      24F       3D      49E       0
-                text3                               137      137       18      26E       0
-                text2                               21B      21B       34      436       0
-                text1                               1B4      1B4       33      368       0
-                maintext                            3A9      3A9      43C      752       0
-                cstackBANK0                          47       47        D       20       1
+                text21                               74       74        5       E8       0
+                text20                               71       71        3       E2       0
+                text19                              106      106       19      20C       0
+                text18                               C8       C8       13      190       0
+                text17                              2BC      2BC       5F      578       0
+                text16                              27D      27D       3F      4FA       0
+                text15                              19E      19E       34      33C       0
+                text14                              31B      31B       7F      636       0
+                text13                               79       79        5       F2       0
+                text12                               A9       A9        E      152       0
+                text11                              11F      11F       21      23E       0
+                text10                               92       92        B      124       0
+                text9                                83       83        7      106       0
+                text8                                EE       EE       18      1DC       0
+                text7                               1D2      1D2       34      3A4       0
+                text6                               16B      16B       33      2D6       0
+                text5                               206      206       3A      40C       0
+                text4                                9D       9D        C      13A       0
+                text3                               140      140       2B      280       0
+                text2                                7E       7E        5       FC       0
+                text1                               240      240       3D      480       0
+                maintext                            39A      39A      44B      734       0
+                cstackBANK0                          47       47       10       20       1
                 cstackCOMMON                         70       70        D       70       1
-                clrtext                              EA       EA        8      1D4       0
-                inittext                            124      124       13      248       0
+                clrtext                              8A       8A        8      114       0
+                inittext                             DB       DB       13      1B6       0
                 dataBANK0                            36       36       11       20       1
                 bssBANK0                             20       20       16       20       1
                 bssCOMMON                            7D       7D        1       70       1
                 strings                               3        3       50        6       0
-                idataBANK0                          100      100       11      200       0
+                idataBANK0                           B7       B7       11      16E       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -68,28 +71,31 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7E5      7E5       1B         0
-                text18                              2CB      2CB       5F         0
-                text17                               E3       E3        7         0
-                text16                               D4       D4        5         0
-                text15                              168      168       21         0
-                text14                               D1       D1        3         0
-                text13                              14F      14F       19         0
-                text12                              111      111       13         0
-                text11                              28C      28C       3F         0
-                text10                              1E7      1E7       34         0
-                text9                               32A      32A       7F         0
-                text8                                D9       D9        5         0
-                text7                                F2       F2        E         0
-                text6                               189      189       2B         0
-                text5                                DE       DE        5         0
-                text4                               24F      24F       3D         0
-                text3                               137      137       18         0
-                text2                               21B      21B       34         0
-                text1                               1B4      1B4       33         0
-                maintext                            3A9      3A9      43C         0
-                clrtext                              EA       EA        8         0
-                inittext                            124      124       13         0
-                idataBANK0                          100      100       11         0
+                text21                               74       74        5         0
+                text20                               71       71        3         0
+                text19                              106      106       19         0
+                text18                               C8       C8       13         0
+                text17                              2BC      2BC       5F         0
+                text16                              27D      27D       3F         0
+                text15                              19E      19E       34         0
+                text14                              31B      31B       7F         0
+                text13                               79       79        5         0
+                text12                               A9       A9        E         0
+                text11                              11F      11F       21         0
+                text10                               92       92        B         0
+                text9                                83       83        7         0
+                text8                                EE       EE       18         0
+                text7                               1D2      1D2       34         0
+                text6                               16B      16B       33         0
+                text5                               206      206       3A         0
+                text4                                9D       9D        C         0
+                text3                               140      140       2B         0
+                text2                                7E       7E        5         0
+                text1                               240      240       3D         0
+                maintext                            39A      39A      44B         0
+                clrtext                              8A       8A        8         0
+                inittext                             DB       DB       13         0
+                idataBANK0                           B7       B7       11         0
 
         CLASS   STRCODE        
 
@@ -105,7 +111,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssCOMMON                            7D       7D        1         1
 
         CLASS   BANK0          
-                cstackBANK0                          47       47        D         1
+                cstackBANK0                          47       47       10         1
                 dataBANK0                            36       36       11         1
                 bssBANK0                             20       20       16         1
 
@@ -141,30 +147,33 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 strings                        000003  000050  000053         6       0  STRING      2
-                bssBANK0                       000020  000034  000054        20       1  BANK0       1
+                bssBANK0                       000020  000037  000057        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                text14                         0000D1  000003  0000D4       1A2       0  CODE        2
-                text16                         0000D4  000005  0000D9       1A8       0  CODE        2
-                text8                          0000D9  000005  0000DE       1B2       0  CODE        2
-                text5                          0000DE  000005  0000E3       1BC       0  CODE        2
-                text17                         0000E3  000007  0000EA       1C6       0  CODE        2
-                clrtext                        0000EA  000008  0000F2       1D4       0  CODE        2
-                text7                          0000F2  00000E  000100       1E4       0  CODE        2
-                idataBANK0                     000100  000011  000111       200       0  CODE        2
-                text12                         000111  000013  000124       222       0  CODE        2
-                inittext                       000124  000013  000137       248       0  CODE        2
-                text3                          000137  000018  00014F       26E       0  CODE        2
-                text13                         00014F  000019  000168       29E       0  CODE        2
-                text15                         000168  000021  000189       2D0       0  CODE        2
-                text6                          000189  00002B  0001B4       312       0  CODE        2
-                text1                          0001B4  000033  0001E7       368       0  CODE        2
-                text10                         0001E7  000034  00021B       3CE       0  CODE        2
-                text2                          00021B  000034  00024F       436       0  CODE        2
-                text4                          00024F  00003D  00028C       49E       0  CODE        2
-                text11                         00028C  00003F  0002CB       518       0  CODE        2
-                text18                         0002CB  00005F  00032A       596       0  CODE        2
-                text9                          00032A  00007F  0003A9       654       0  CODE        2
-                maintext                       0003A9  00043C  0007E5       752       0  CODE        2
+                text20                         000071  000003  000074        E2       0  CODE        2
+                text21                         000074  000005  000079        E8       0  CODE        2
+                text13                         000079  000005  00007E        F2       0  CODE        2
+                text2                          00007E  000005  000083        FC       0  CODE        2
+                text9                          000083  000007  00008A       106       0  CODE        2
+                clrtext                        00008A  000008  000092       114       0  CODE        2
+                text10                         000092  00000B  00009D       124       0  CODE        2
+                text4                          00009D  00000C  0000A9       13A       0  CODE        2
+                text12                         0000A9  00000E  0000B7       152       0  CODE        2
+                idataBANK0                     0000B7  000011  0000C8       16E       0  CODE        2
+                text18                         0000C8  000013  0000DB       190       0  CODE        2
+                inittext                       0000DB  000013  0000EE       1B6       0  CODE        2
+                text8                          0000EE  000018  000106       1DC       0  CODE        2
+                text19                         000106  000019  00011F       20C       0  CODE        2
+                text11                         00011F  000021  000140       23E       0  CODE        2
+                text3                          000140  00002B  00016B       280       0  CODE        2
+                text6                          00016B  000033  00019E       2D6       0  CODE        2
+                text15                         00019E  000034  0001D2       33C       0  CODE        2
+                text7                          0001D2  000034  000206       3A4       0  CODE        2
+                text5                          000206  00003A  000240       40C       0  CODE        2
+                text1                          000240  00003D  00027D       480       0  CODE        2
+                text16                         00027D  00003F  0002BC       4FA       0  CODE        2
+                text17                         0002BC  00005F  00031B       578       0  CODE        2
+                text14                         00031B  00007F  00039A       636       0  CODE        2
+                maintext                       00039A  00044B  0007E5       734       0  CODE        2
                 cinit                          0007E5  00001B  000800       FCA       0  CODE        2
                 config                         002007  000001  002008      400E       0  CONFIG      2
 
@@ -172,20 +181,20 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0054-006F             1C           1
+        BANK0            0057-006F             19           1
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0053-00D0             7E           2
+        CODE             0053-0070             1E           2
                          0800-1FFF            800
         CONFIG           2008-2008              1           2
-        CONST            0053-00D0             7E           2
+        CONST            0053-0070             1E           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0053-00D0             7E           2
+        ENTRY            0053-0070             1E           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
-        RAM              0054-006F             1C           1
+        RAM              0057-006F             19           1
                          00A0-00EF             50
                          0110-016F             60
                          0190-01EF             60
@@ -194,9 +203,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0053-00D0             7E           2
+        STRCODE          0053-0070             1E           2
                          0800-1FFF           1800
-        STRING           0053-00D0             7E           2
+        STRING           0053-0070             1E           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -302,55 +311,61 @@ ___latbits                  (abs)        0002
 ___sp                       stack        0000
 __end_of__initialization    cinit        07FC
 __end_of__stringtab         strings      0013
-__end_of_clearLCD           text17       00EA
-__end_of_cmdLCD             text18       032A
-__end_of_currentKey         text16       00D9
-__end_of_delFIFO            text15       0189
-__end_of_displayFIFO        text14       00D4
-__end_of_getFIFO            text13       0168
-__end_of_gotoxy             text3        014F
+__end_of_clearLCD           text9        008A
+__end_of_cmdLCD             text17       031B
+__end_of_currentKey         text21       0079
+__end_of_delFIFO            text11       0140
+__end_of_displayFIFO        text20       0074
+__end_of_getFIFO            text19       011F
+__end_of_gotoxy             text8        0106
 __end_of_indPassosSize      strings      0029
 __end_of_indicePassos       strings      0028
-__end_of_initKeyboard       text12       0124
-__end_of_initLCD            text11       02CB
-__end_of_initSerialIO       text10       021B
+__end_of_initKeyboard       text18       00DB
+__end_of_initLCD            text16       02BC
+__end_of_initSerialIO       text15       01D2
 __end_of_keyboardMatrix     strings      0023
-__end_of_keyboardScan       text9        03A9
+__end_of_keyboardScan       text14       039A
 __end_of_main               maintext     07E5
-__end_of_previousKey        text8        00DE
-__end_of_putFIFO            text7        0100
-__end_of_putLCD             text2        024F
-__end_of_serialIObyteShift  text6        01B4
-__end_of_serialIOload       text5        00E3
-__end_of_serialIOscan       text4        028C
-__end_of_writeLCD           text1        01E7
+__end_of_previousKey        text13       007E
+__end_of_putFIFO            text12       00B7
+__end_of_putLCD             text7        0206
+__end_of_resetFIFO          text10       009D
+__end_of_screen_car         text5        0240
+__end_of_screen_menu        text4        00A9
+__end_of_serialIObyteShift  text3        016B
+__end_of_serialIOload       text2        0083
+__end_of_serialIOscan       text1        027D
+__end_of_writeLCD           text6        019E
 __initialization            cinit        07E5
 __pbssBANK0                 bssBANK0     0020
 __pbssCOMMON                bssCOMMON    007D
 __pcstackBANK0              cstackBANK0  0047
 __pcstackCOMMON             cstackCOMMON 0070
 __pdataBANK0                dataBANK0    0036
-__pidataBANK0               idataBANK0   0100
-__pmaintext                 maintext     03A9
+__pidataBANK0               idataBANK0   00B7
+__pmaintext                 maintext     039A
 __pstrings                  strings      0003
-__ptext1                    text1        01B4
-__ptext10                   text10       01E7
-__ptext11                   text11       028C
-__ptext12                   text12       0111
-__ptext13                   text13       014F
-__ptext14                   text14       00D1
-__ptext15                   text15       0168
-__ptext16                   text16       00D4
-__ptext17                   text17       00E3
-__ptext18                   text18       02CB
-__ptext2                    text2        021B
-__ptext3                    text3        0137
-__ptext4                    text4        024F
-__ptext5                    text5        00DE
-__ptext6                    text6        0189
-__ptext7                    text7        00F2
-__ptext8                    text8        00D9
-__ptext9                    text9        032A
+__ptext1                    text1        0240
+__ptext10                   text10       0092
+__ptext11                   text11       011F
+__ptext12                   text12       00A9
+__ptext13                   text13       0079
+__ptext14                   text14       031B
+__ptext15                   text15       019E
+__ptext16                   text16       027D
+__ptext17                   text17       02BC
+__ptext18                   text18       00C8
+__ptext19                   text19       0106
+__ptext2                    text2        007E
+__ptext20                   text20       0071
+__ptext21                   text21       0074
+__ptext3                    text3        0140
+__ptext4                    text4        009D
+__ptext5                    text5        0206
+__ptext6                    text6        016B
+__ptext7                    text7        01D2
+__ptext8                    text8        00EE
+__ptext9                    text9        0083
 __size_of_clearLCD          (abs)        0000
 __size_of_cmdLCD            (abs)        0000
 __size_of_currentKey        (abs)        0000
@@ -366,44 +381,50 @@ __size_of_main              (abs)        0000
 __size_of_previousKey       (abs)        0000
 __size_of_putFIFO           (abs)        0000
 __size_of_putLCD            (abs)        0000
+__size_of_resetFIFO         (abs)        0000
+__size_of_screen_car        (abs)        0000
+__size_of_screen_menu       (abs)        0000
 __size_of_serialIObyteShift (abs)        0000
 __size_of_serialIOload      (abs)        0000
 __size_of_serialIOscan      (abs)        0000
 __size_of_writeLCD          (abs)        0000
 __stringbase                strings      0012
 __stringtab                 strings      0003
-_clearLCD                   text17       00E3
-_cmdLCD                     text18       02CB
+_clearLCD                   text9        0083
+_cmdLCD                     text17       02BC
 _currKey                    bssBANK0     0023
-_currentKey                 text16       00D4
-_delFIFO                    text15       0168
-_displayFIFO                text14       00D1
+_currentKey                 text21       0074
+_delFIFO                    text11       011F
+_displayFIFO                text20       0071
 _fifo                       bssBANK0     0026
 _fifoHead                   bssCOMMON    007D
 _fifoTail                   bssBANK0     0025
-_getFIFO                    text13       014F
-_gotoxy                     text3        0137
+_getFIFO                    text19       0106
+_gotoxy                     text8        00EE
 _indPassosSize              strings      0028
-_initKeyboard               text12       0111
-_initLCD                    text11       028C
-_initSerialIO               text10       01E7
+_initKeyboard               text18       00C8
+_initLCD                    text16       027D
+_initSerialIO               text15       019E
 _keyboardMatrix             strings      0013
-_keyboardScan               text9        032A
+_keyboardScan               text14       031B
 _lenSerialIO                bssBANK0     0020
-_main                       maintext     03A9
+_main                       maintext     039A
 _prevKey                    bssBANK0     0024
-_previousKey                text8        00D9
+_previousKey                text13       0079
 _ptrSerialIn                bssBANK0     0022
 _ptrSerialOut               bssBANK0     0021
-_putFIFO                    text7        00F2
-_putLCD                     text2        021B
-_serialIObyteShift          text6        0189
-_serialIOload               text5        00DE
-_serialIOscan               text4        024F
-_writeLCD                   text1        01B4
+_putFIFO                    text12       00A9
+_putLCD                     text7        01D2
+_resetFIFO                  text10       0092
+_screen_car                 text5        0206
+_screen_menu                text4        009D
+_serialIObyteShift          text3        0140
+_serialIOload               text2        007E
+_serialIOscan               text1        0240
+_writeLCD                   text6        016B
 btemp                       (abs)        007E
-checktecla@F1328            dataBANK0    0036
-clear_ram0                  clrtext      00EA
+checktecla@F1329            dataBANK0    0036
+clear_ram0                  clrtext      008A
 cmdLCD@cmd                  cstackCOMMON 0072
 cmdLCD@nibble               cstackCOMMON 0073
 delFIFO@n                   cstackCOMMON 0071
@@ -415,8 +436,8 @@ gotoxy@y                    cstackCOMMON 0074
 initSerialIO@length         cstackCOMMON 0071
 initSerialIO@ptrIn          cstackCOMMON 0073
 initSerialIO@ptrOut         cstackCOMMON 0070
-init_fetch0                 inittext     0124
-init_ram0                   inittext     0128
+init_fetch0                 inittext     00DB
+init_ram0                   inittext     00DF
 intlevel0                   functab      0000
 intlevel1                   functab      0000
 intlevel2                   functab      0000
@@ -426,15 +447,15 @@ intlevel5                   functab      0000
 keyboardScan@aux            cstackCOMMON 0078
 keyboardScan@i              cstackCOMMON 0079
 keyboardScan@j              cstackCOMMON 007A
-main@a                      cstackBANK0  004A
-main@atuador                cstackBANK0  004E
-main@b                      cstackBANK0  004B
-main@c                      cstackBANK0  004C
-main@d                      cstackBANK0  004D
-main@estado                 cstackBANK0  0051
-main@rest                   cstackBANK0  0053
-main@sensor                 cstackBANK0  004F
-main@tecla                  cstackBANK0  0050
+main@a                      cstackBANK0  004D
+main@atuador                cstackBANK0  0051
+main@b                      cstackBANK0  004E
+main@c                      cstackBANK0  004F
+main@d                      cstackBANK0  0050
+main@estado                 cstackBANK0  0054
+main@rest                   cstackBANK0  0056
+main@sensor                 cstackBANK0  0052
+main@tecla                  cstackBANK0  0053
 putFIFO@c                   cstackCOMMON 0071
 putLCD@c                    cstackCOMMON 0072
 putLCD@nibble               cstackCOMMON 0073
@@ -462,15 +483,15 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  estado          2   10[BANK0 ] int 
-  rest            1   12[BANK0 ] unsigned char 
-  tecla           1    9[BANK0 ] unsigned char 
-  sensor          1    8[BANK0 ] struct .
-  atuador         1    7[BANK0 ] struct .
-  d               1    6[BANK0 ] unsigned char 
-  c               1    5[BANK0 ] unsigned char 
-  b               1    4[BANK0 ] unsigned char 
-  a               1    3[BANK0 ] unsigned char 
+  estado          2   13[BANK0 ] int 
+  rest            1   15[BANK0 ] unsigned char 
+  tecla           1   12[BANK0 ] unsigned char 
+  sensor          1   11[BANK0 ] struct .
+  atuador         1   10[BANK0 ] struct .
+  d               1    9[BANK0 ] unsigned char 
+  c               1    8[BANK0 ] unsigned char 
+  b               1    7[BANK0 ] unsigned char 
+  a               1    6[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -485,7 +506,7 @@ FUNCTION INFORMATION:
       Temps:          0       3       0       0       0
       Totals:         0      13       0       0       0
 Total ram usage:       13 bytes
- Hardware stack levels required when called:    3
+ Hardware stack levels required when called:    4
  This function calls:
 		_clearLCD
 		_currentKey
@@ -498,109 +519,13 @@ Total ram usage:       13 bytes
 		_keyboardScan
 		_previousKey
 		_putFIFO
+		_resetFIFO
+		_screen_car
+		_screen_menu
 		_serialIOscan
 		_writeLCD
  This function is called by:
 		Startup code after reset
- This function uses a non-reentrant model
-
-
- *************** function _writeLCD *****************
- Defined at:
-		line 87 in file "lcd.c"
- Parameters:    Size  Location     Type
-  x               1    wreg     unsigned char 
-  y               1    8[COMMON] unsigned char 
-  ptr             2    9[COMMON] PTR const unsigned char 
-		 -> STR_3(17), STR_2(12), STR_1(13), checktecla@linha2(17), 
-		 -> fifo(16), 
- Auto vars:     Size  Location     Type
-  x               1   12[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         3       0       0       0       0
-      Locals:         1       0       0       0       0
-      Temps:          1       0       0       0       0
-      Totals:         5       0       0       0       0
-Total ram usage:        5 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_gotoxy
-		_putLCD
- This function is called by:
-		_main
-		_checktecla
-		_screen_car
-		_screen_menu
- This function uses a non-reentrant model
-
-
- *************** function _putLCD *****************
- Defined at:
-		line 66 in file "lcd.c"
- Parameters:    Size  Location     Type
-  c               1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  c               1    2[COMMON] unsigned char 
-  nibble          1    3[COMMON] volatile struct .
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       0       0       0       0
-      Locals:         2       0       0       0       0
-      Temps:          2       0       0       0       0
-      Totals:         4       0       0       0       0
-Total ram usage:        4 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_writeLCD
- This function uses a non-reentrant model
-
-
- *************** function _gotoxy *****************
- Defined at:
-		line 83 in file "lcd.c"
- Parameters:    Size  Location     Type
-  x               1    wreg     unsigned char 
-  y               1    4[COMMON] unsigned char 
- Auto vars:     Size  Location     Type
-  x               1    7[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         1       0       0       0       0
-      Locals:         1       0       0       0       0
-      Temps:          2       0       0       0       0
-      Totals:         4       0       0       0       0
-Total ram usage:        4 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_cmdLCD
- This function is called by:
-		_writeLCD
  This function uses a non-reentrant model
 
 
@@ -696,9 +621,261 @@ Total ram usage:        4 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _screen_menu *****************
+ Defined at:
+		line 144 in file "lcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_writeLCD
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _screen_car *****************
+ Defined at:
+		line 135 in file "lcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       3       0       0       0
+      Totals:         0       3       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_clearLCD
+		_writeLCD
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _writeLCD *****************
+ Defined at:
+		line 87 in file "lcd.c"
+ Parameters:    Size  Location     Type
+  x               1    wreg     unsigned char 
+  y               1    8[COMMON] unsigned char 
+  ptr             2    9[COMMON] PTR const unsigned char 
+		 -> STR_3(17), STR_2(12), STR_1(13), checktecla@linha2(17), 
+		 -> fifo(16), 
+ Auto vars:     Size  Location     Type
+  x               1   12[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         3       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_gotoxy
+		_putLCD
+ This function is called by:
+		_screen_car
+		_screen_menu
+		_main
+		_checktecla
+ This function uses a non-reentrant model
+
+
+ *************** function _putLCD *****************
+ Defined at:
+		line 66 in file "lcd.c"
+ Parameters:    Size  Location     Type
+  c               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  c               1    2[COMMON] unsigned char 
+  nibble          1    3[COMMON] volatile struct .
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_writeLCD
+ This function uses a non-reentrant model
+
+
+ *************** function _gotoxy *****************
+ Defined at:
+		line 83 in file "lcd.c"
+ Parameters:    Size  Location     Type
+  x               1    wreg     unsigned char 
+  y               1    4[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  x               1    7[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_cmdLCD
+ This function is called by:
+		_writeLCD
+ This function uses a non-reentrant model
+
+
+ *************** function _clearLCD *****************
+ Defined at:
+		line 103 in file "lcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_cmdLCD
+ This function is called by:
+		_screen_car
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _resetFIFO *****************
+ Defined at:
+		line 60 in file "fifo.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_delFIFO
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _delFIFO *****************
+ Defined at:
+		line 47 in file "fifo.c"
+ Parameters:    Size  Location     Type
+  n               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  n               1    1[COMMON] unsigned char 
+  ret             1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         3       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_resetFIFO
+		_main
+ This function uses a non-reentrant model
+
+
  *************** function _putFIFO *****************
  Defined at:
-		line 17 in file "fifo.c"
+		line 19 in file "fifo.c"
  Parameters:    Size  Location     Type
   c               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -849,6 +1026,38 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _cmdLCD *****************
+ Defined at:
+		line 40 in file "lcd.c"
+ Parameters:    Size  Location     Type
+  cmd             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cmd             1    2[COMMON] unsigned char 
+  nibble          1    3[COMMON] volatile struct .
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_initLCD
+		_gotoxy
+		_clearLCD
+ This function uses a non-reentrant model
+
+
  *************** function _initKeyboard *****************
  Defined at:
 		line 103 in file "keyboard.c"
@@ -880,7 +1089,7 @@ Total ram usage:        0 bytes
 
  *************** function _getFIFO *****************
  Defined at:
-		line 23 in file "fifo.c"
+		line 25 in file "fifo.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -910,7 +1119,7 @@ Total ram usage:        2 bytes
 
  *************** function _displayFIFO *****************
  Defined at:
-		line 40 in file "fifo.c"
+		line 42 in file "fifo.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -929,36 +1138,6 @@ Total ram usage:        2 bytes
       Temps:          0       0       0       0       0
       Totals:         0       0       0       0       0
 Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _delFIFO *****************
- Defined at:
-		line 45 in file "fifo.c"
- Parameters:    Size  Location     Type
-  n               1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  n               1    1[COMMON] unsigned char 
-  ret             1    2[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      unsigned char 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       0       0       0       0
-      Locals:         2       0       0       0       0
-      Temps:          1       0       0       0       0
-      Totals:         3       0       0       0       0
-Total ram usage:        3 bytes
  Hardware stack levels used:    1
  This function calls:
 		Nothing
@@ -996,88 +1175,26 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _clearLCD *****************
- Defined at:
-		line 103 in file "lcd.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       0       0       0       0
-      Locals:         0       0       0       0       0
-      Temps:          0       0       0       0       0
-      Totals:         0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_cmdLCD
- This function is called by:
-		_main
-		_screen_car
- This function uses a non-reentrant model
-
-
- *************** function _cmdLCD *****************
- Defined at:
-		line 40 in file "lcd.c"
- Parameters:    Size  Location     Type
-  cmd             1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  cmd             1    2[COMMON] unsigned char 
-  nibble          1    3[COMMON] volatile struct .
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       0       0       0       0
-      Locals:         2       0       0       0       0
-      Temps:          2       0       0       0       0
-      Totals:         4       0       0       0       0
-Total ram usage:        4 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_initLCD
-		_gotoxy
-		_clearLCD
- This function uses a non-reentrant model
-
-
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 serialIO.c
-		_serialIOload  		CODE           	00DE	0000	6
-		_serialIOscan  		CODE           	024F	0000	62
-		_initSerialIO  		CODE           	01E7	0000	53
-		_serialIObyteShift		CODE           	0189	0000	44
+		_serialIOload  		CODE           	007E	0000	6
+		_serialIOscan  		CODE           	0240	0000	62
+		_initSerialIO  		CODE           	019E	0000	53
+		_serialIObyteShift		CODE           	0140	0000	44
 
 serialIO.c estimated size: 165
 
 fifo.c
-		_displayFIFO   		CODE           	00D1	0000	4
-		_getFIFO       		CODE           	014F	0000	26
-		_putFIFO       		CODE           	00F2	0000	15
-		_delFIFO       		CODE           	0168	0000	34
+		_displayFIFO   		CODE           	0071	0000	4
+		_getFIFO       		CODE           	0106	0000	26
+		_resetFIFO     		CODE           	0092	0000	12
+		_putFIFO       		CODE           	00A9	0000	15
+		_delFIFO       		CODE           	011F	0000	34
 
-fifo.c estimated size: 79
+fifo.c estimated size: 91
 
 shared
 		__stringtab    		STRING         	0003	0000	17
@@ -1089,25 +1206,27 @@ shared
 shared estimated size: 60
 
 lcd.c
-		_putLCD        		CODE           	021B	0000	53
-		_cmdLCD        		CODE           	02CB	0000	96
-		_gotoxy        		CODE           	0137	0000	25
-		_writeLCD      		CODE           	01B4	0000	52
-		_initLCD       		CODE           	028C	0000	64
-		_clearLCD      		CODE           	00E3	0000	8
+		_putLCD        		CODE           	01D2	0000	53
+		_cmdLCD        		CODE           	02BC	0000	96
+		_gotoxy        		CODE           	00EE	0000	25
+		_screen_car    		CODE           	0206	0000	59
+		_screen_menu   		CODE           	009D	0000	13
+		_writeLCD      		CODE           	016B	0000	52
+		_initLCD       		CODE           	027D	0000	64
+		_clearLCD      		CODE           	0083	0000	8
 
-lcd.c estimated size: 298
+lcd.c estimated size: 370
 
 main.c
-		_main          		CODE           	03A9	0000	1085
+		_main          		CODE           	039A	0000	1100
 
-main.c estimated size: 1085
+main.c estimated size: 1100
 
 keyboard.c
-		_initKeyboard  		CODE           	0111	0000	20
-		_currentKey    		CODE           	00D4	0000	6
-		_keyboardScan  		CODE           	032A	0000	128
-		_previousKey   		CODE           	00D9	0000	6
+		_initKeyboard  		CODE           	00C8	0000	20
+		_currentKey    		CODE           	0074	0000	6
+		_keyboardScan  		CODE           	031B	0000	128
+		_previousKey   		CODE           	0079	0000	6
 
 keyboard.c estimated size: 160
 

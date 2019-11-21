@@ -1,1 +1,1 @@
-build/default/production\fifo.p1: fifo.c
+build/default/production\fifo.p1: fifo.c fifo.h

@@ -2558,6 +2558,7 @@ unsigned char getFIFO( void );
 unsigned char statusFIFO( void );
 void * displayFIFO( void );
 unsigned char delFIFO( unsigned char n );
+void resetFIFO (void);
 # 44 "main.c" 2
 # 1 "./serialIO.h" 1
 # 11 "./serialIO.h"
@@ -2604,13 +2605,12 @@ void main(void)
     SENSORESbits_t sensor;
     ATUADORESbits_t atuador;
     int estado = 0;
-
     initLCD();
-
+    screen_car();
     initKeyboard();
     initSerialIO( &sensor, &atuador, 1 );
     atuador.ABCD = 0x00;
-# 73 "main.c"
+# 72 "main.c"
     while( 1 )
     {
 
@@ -2618,7 +2618,7 @@ void main(void)
 
 
         keyboardScan();
-
+        screen_menu ();
         switch( estado )
         {
             case 0:
@@ -2825,9 +2825,11 @@ void main(void)
                             putFIFO( tecla | 0x20 );
                         break;
                 case '0':
-                        delFIFO(16);
                         clearLCD();
                         a = b = c = d = 0;
+                        atuador.ABCD = 0;
+                        resetFIFO();
+                        estado = 0;
                         break;
                 case '1':
                 case '2':
@@ -2858,7 +2860,7 @@ void main(void)
                         estado = 10;
                         break;
             }
-            writeLCD(0,0, displayFIFO() );
+            writeLCD(0,1, displayFIFO() );
         }
         serialIOscan();
     }

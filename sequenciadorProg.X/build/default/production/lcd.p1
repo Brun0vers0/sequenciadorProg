@@ -590,8 +590,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _checktecla ]
 [f ]
-[v F1328 `uc ~T0 @X0 -> 17 `i s ]
-[i F1328
+[v F1329 `uc ~T0 @X0 -> 17 `i s ]
+[i F1329
 :U ..
 "111
 [; ;lcd.c: 111:     char linha2[17] = "      [  ]      ";
@@ -615,7 +615,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _linha2 `uc ~T0 @X0 -> 17 `i a ]
-[e = _linha2 F1328 ]
+[e = _linha2 F1329 ]
 "112
 [; ;lcd.c: 112:     char aux;
 [v _aux `uc ~T0 @X0 1 a ]

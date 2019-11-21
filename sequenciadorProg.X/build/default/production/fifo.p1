@@ -233,160 +233,181 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"13 fifo.c
-[; ;fifo.c: 13: unsigned char fifo[16];
+"15 fifo.c
+[; ;fifo.c: 15: unsigned char fifo[16];
 [v _fifo `uc ~T0 @X0 -> 16 `i e ]
-"14
-[; ;fifo.c: 14: unsigned char fifoHead = 0;
+"16
+[; ;fifo.c: 16: unsigned char fifoHead = 0;
 [v _fifoHead `uc ~T0 @X0 1 e ]
 [i _fifoHead
 -> -> 0 `i `uc
 ]
-"15
-[; ;fifo.c: 15: unsigned char fifoTail = 0;
+"17
+[; ;fifo.c: 17: unsigned char fifoTail = 0;
 [v _fifoTail `uc ~T0 @X0 1 e ]
 [i _fifoTail
 -> -> 0 `i `uc
 ]
-"17
-[; ;fifo.c: 17: void putFIFO( unsigned char c )
+"19
+[; ;fifo.c: 19: void putFIFO( unsigned char c )
 [v _putFIFO `(v ~T0 @X0 1 ef1`uc ]
-"18
-[; ;fifo.c: 18: {
+"20
+[; ;fifo.c: 20: {
 {
 [e :U _putFIFO ]
-"17
-[; ;fifo.c: 17: void putFIFO( unsigned char c )
-[v _c `uc ~T0 @X0 1 r1 ]
-"18
-[; ;fifo.c: 18: {
-[f ]
 "19
-[; ;fifo.c: 19:     fifo[ fifoHead ] = c;
-[e = *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux _c ]
+[; ;fifo.c: 19: void putFIFO( unsigned char c )
+[v _c `uc ~T0 @X0 1 r1 ]
 "20
-[; ;fifo.c: 20:     ++fifoHead;
-[e =+ _fifoHead -> -> 1 `i `uc ]
+[; ;fifo.c: 20: {
+[f ]
 "21
-[; ;fifo.c: 21: }
+[; ;fifo.c: 21:     fifo[ fifoHead ] = c;
+[e = *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux _c ]
+"22
+[; ;fifo.c: 22:     ++fifoHead;
+[e =+ _fifoHead -> -> 1 `i `uc ]
+"23
+[; ;fifo.c: 23: }
 [e :UE 138 ]
 }
-"23
-[; ;fifo.c: 23: unsigned char getFIFO( void )
+"25
+[; ;fifo.c: 25: unsigned char getFIFO( void )
 [v _getFIFO `(uc ~T0 @X0 1 ef ]
-"24
-[; ;fifo.c: 24: {
+"26
+[; ;fifo.c: 26: {
 {
 [e :U _getFIFO ]
 [f ]
-"25
-[; ;fifo.c: 25:     unsigned char aux = 0;
+"27
+[; ;fifo.c: 27:     unsigned char aux = 0;
 [v _aux `uc ~T0 @X0 1 a ]
 [e = _aux -> -> 0 `i `uc ]
-"27
-[; ;fifo.c: 27:     if( fifoTail != fifoHead )
-[e $ ! != -> _fifoTail `i -> _fifoHead `i 140  ]
-"28
-[; ;fifo.c: 28:     {
-{
 "29
-[; ;fifo.c: 29:         aux = fifo[ fifoTail ];
-[e = _aux *U + &U _fifo * -> _fifoTail `ux -> -> # *U &U _fifo `ui `ux ]
+[; ;fifo.c: 29:     if( fifoTail != fifoHead )
+[e $ ! != -> _fifoTail `i -> _fifoHead `i 140  ]
 "30
-[; ;fifo.c: 30:         ++fifoTail;
-[e =+ _fifoTail -> -> 1 `i `uc ]
+[; ;fifo.c: 30:     {
+{
 "31
-[; ;fifo.c: 31:     }
+[; ;fifo.c: 31:         aux = fifo[ fifoTail ];
+[e = _aux *U + &U _fifo * -> _fifoTail `ux -> -> # *U &U _fifo `ui `ux ]
+"32
+[; ;fifo.c: 32:         ++fifoTail;
+[e =+ _fifoTail -> -> 1 `i `uc ]
+"33
+[; ;fifo.c: 33:     }
 }
 [e :U 140 ]
-"32
-[; ;fifo.c: 32:     return( aux );
+"34
+[; ;fifo.c: 34:     return( aux );
 [e ) _aux ]
 [e $UE 139  ]
-"33
-[; ;fifo.c: 33: }
+"35
+[; ;fifo.c: 35: }
 [e :UE 139 ]
 }
-"35
-[; ;fifo.c: 35: unsigned char statusFIFO( void )
+"37
+[; ;fifo.c: 37: unsigned char statusFIFO( void )
 [v _statusFIFO `(uc ~T0 @X0 1 ef ]
-"36
-[; ;fifo.c: 36: {
+"38
+[; ;fifo.c: 38: {
 {
 [e :U _statusFIFO ]
 [f ]
-"37
-[; ;fifo.c: 37:     return( (fifoHead - fifoTail) % 16 );
+"39
+[; ;fifo.c: 39:     return( (fifoHead - fifoTail) % 16 );
 [e ) -> % - -> _fifoHead `i -> _fifoTail `i -> 16 `i `uc ]
 [e $UE 141  ]
-"38
-[; ;fifo.c: 38: }
+"40
+[; ;fifo.c: 40: }
 [e :UE 141 ]
 }
-"40
-[; ;fifo.c: 40: void * displayFIFO( void )
+"42
+[; ;fifo.c: 42: void * displayFIFO( void )
 [v _displayFIFO `(*v ~T0 @X0 1 ef ]
-"41
-[; ;fifo.c: 41: {
+"43
+[; ;fifo.c: 43: {
 {
 [e :U _displayFIFO ]
 [f ]
-"42
-[; ;fifo.c: 42:     return( fifo );
+"44
+[; ;fifo.c: 44:     return( fifo );
 [e ) -> &U _fifo `*v ]
 [e $UE 142  ]
-"43
-[; ;fifo.c: 43: }
+"45
+[; ;fifo.c: 45: }
 [e :UE 142 ]
 }
-"45
-[; ;fifo.c: 45: unsigned char delFIFO( unsigned char n )
+"47
+[; ;fifo.c: 47: unsigned char delFIFO( unsigned char n )
 [v _delFIFO `(uc ~T0 @X0 1 ef1`uc ]
-"46
-[; ;fifo.c: 46: {
+"48
+[; ;fifo.c: 48: {
 {
 [e :U _delFIFO ]
-"45
-[; ;fifo.c: 45: unsigned char delFIFO( unsigned char n )
-[v _n `uc ~T0 @X0 1 r1 ]
-"46
-[; ;fifo.c: 46: {
-[f ]
 "47
-[; ;fifo.c: 47:     unsigned char ret;
-[v _ret `uc ~T0 @X0 1 a ]
+[; ;fifo.c: 47: unsigned char delFIFO( unsigned char n )
+[v _n `uc ~T0 @X0 1 r1 ]
 "48
-[; ;fifo.c: 48:     while( n && fifoHead )
+[; ;fifo.c: 48: {
+[f ]
+"49
+[; ;fifo.c: 49:     unsigned char ret;
+[v _ret `uc ~T0 @X0 1 a ]
+"50
+[; ;fifo.c: 50:     while( n && fifoHead )
 [e $U 144  ]
 [e :U 145 ]
-"49
-[; ;fifo.c: 49:     {
-{
-"50
-[; ;fifo.c: 50:         --fifoHead;
-[e =- _fifoHead -> -> 1 `i `uc ]
 "51
-[; ;fifo.c: 51:         ret = fifo[fifoHead];
-[e = _ret *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux ]
+[; ;fifo.c: 51:     {
+{
 "52
-[; ;fifo.c: 52:         fifo[ fifoHead ] = 0;
-[e = *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux -> -> 0 `i `uc ]
+[; ;fifo.c: 52:         --fifoHead;
+[e =- _fifoHead -> -> 1 `i `uc ]
 "53
-[; ;fifo.c: 53:         --n;
-[e =- _n -> -> 1 `i `uc ]
+[; ;fifo.c: 53:         ret = fifo[fifoHead];
+[e = _ret *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux ]
 "54
-[; ;fifo.c: 54:     }
+[; ;fifo.c: 54:         fifo[ fifoHead ] = 0;
+[e = *U + &U _fifo * -> _fifoHead `ux -> -> # *U &U _fifo `ui `ux -> -> 0 `i `uc ]
+"55
+[; ;fifo.c: 55:         --n;
+[e =- _n -> -> 1 `i `uc ]
+"56
+[; ;fifo.c: 56:     }
 }
 [e :U 144 ]
-"48
-[; ;fifo.c: 48:     while( n && fifoHead )
+"50
+[; ;fifo.c: 50:     while( n && fifoHead )
 [e $ && != -> _n `i -> 0 `i != -> _fifoHead `i -> 0 `i 145  ]
 [e :U 146 ]
-"55
-[; ;fifo.c: 55:     return( ret );
+"57
+[; ;fifo.c: 57:     return( ret );
 [e ) _ret ]
 [e $UE 143  ]
-"56
-[; ;fifo.c: 56: }
+"58
+[; ;fifo.c: 58: }
 [e :UE 143 ]
+}
+"60
+[; ;fifo.c: 60: void resetFIFO (void)
+[v _resetFIFO `(v ~T0 @X0 1 ef ]
+"61
+[; ;fifo.c: 61: {
+{
+[e :U _resetFIFO ]
+[f ]
+"62
+[; ;fifo.c: 62:     delFIFO(16);
+[e ( _delFIFO (1 -> -> 16 `i `uc ]
+"63
+[; ;fifo.c: 63:     fifoHead = 0;
+[e = _fifoHead -> -> 0 `i `uc ]
+"64
+[; ;fifo.c: 64:     fifoTail = 0;
+[e = _fifoTail -> -> 0 `i `uc ]
+"65
+[; ;fifo.c: 65: }
+[e :UE 147 ]
 }
