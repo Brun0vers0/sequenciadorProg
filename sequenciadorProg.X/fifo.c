@@ -29,7 +29,12 @@ unsigned char getFIFO( void )
     if( fifoTail != fifoHead )
     {
         aux = fifo[ fifoTail ];
-        ++fifoTail;
+        ++fifoTail;        
+    }
+    else if( fifoTail = fifoHead )
+    {
+        fifoTail = 0;
+        aux = fifo[ fifoTail ];        
     }
     return( aux );
 }
@@ -62,4 +67,9 @@ void resetFIFO (void)
     delFIFO(16);
     fifoHead = 0;
     fifoTail = 0;
+}
+
+void continueFIFO (void)
+{
+    fifoHead = 0;
 }
