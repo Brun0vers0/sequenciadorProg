@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V2.00 build -1524193055 
-                                                                                               Thu Nov 21 15:06:09 2019
+                                                                                               Thu Nov 21 16:52:05 2019
 
 Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
      1  0000                     
@@ -1456,7 +1456,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1393                           __CFG_MCLRE$OFF equ 0x0
   1394  0000                     global __CFG_LVP$OFF
   1395                           __CFG_LVP$OFF equ 0x0
-  1396  0000                     	file	"C:\Users\18175218\AppData\Local\Temp\sa98."
+  1396  0000                     	file	"C:\Users\18175218\AppData\Local\Temp\s22o."
   1397                           	line	#
   1398                           psect cinit,class=CODE,delta=2
   1399                           global start_initialization
@@ -1502,7 +1502,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1439                           checktecla@F1329:
   1440  0036                            ds      17
   1441  0036                     
-  1442                           	file	"C:\Users\18175218\AppData\Local\Temp\sa98."
+  1442                           	file	"C:\Users\18175218\AppData\Local\Temp\s22o."
   1443                           	line	#
   1444                           global btemp
   1445                           psect inittext,class=CODE,delta=2
@@ -3602,46 +3602,46 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3536  06A9  1303               	movwf	(??_main+0)+0
   3537  06AA  00CA               	movf	(??_main+0)+0,w
   3538  06AB  084A               	movwf	(main@tecla)
-  3539  06AC  00D3               	line	255
-  3540                           ;main.c: 255:             switch(tecla)
+  3539  06AC  00D3               	line	254
+  3540                           ;main.c: 254:             switch(tecla)
   3541                           	goto	l2079
-  3542  06AD  2F90               	line	257
-  3543                           ;main.c: 256:             {;main.c: 257:                 case 'A':
+  3542  06AD  2F90               	line	256
+  3543                           ;main.c: 255:             {;main.c: 256:                 case 'A':
   3544                           	
   3545                           l254:	
-  3546  06AE                     	line	258
+  3546  06AE                     	line	257
   3547                           	
   3548                           l2017:	
-  3549  06AE                     ;main.c: 258:                         ++a;
+  3549  06AE                     ;main.c: 257:                         ++a;
   3550                           	movlw	low(01h)
   3551  06AE  3001               	movwf	(??_main+0)+0
   3552  06AF  00CA               	movf	(??_main+0)+0,w
   3553  06B0  084A               	addwf	(main@a),f
-  3554  06B1  07CD               	line	259
+  3554  06B1  07CD               	line	258
   3555                           	
   3556                           l2019:	
-  3557  06B2                     ;main.c: 259:                         if( a % 2 )
+  3557  06B2                     ;main.c: 258:                         if( a % 2 )
   3558                           	btfss	(main@a),(0)&7
   3559  06B2  1C4D               	goto	u1171
   3560  06B3  2EB5               	goto	u1170
   3561  06B4  2EB6               u1171:
   3562  06B5                     	goto	l2023
   3563  06B5  2EBD               u1170:
-  3564  06B6                     	line	260
+  3564  06B6                     	line	259
   3565                           	
   3566                           l2021:	
-  3567  06B6                     ;main.c: 260:                             putFIFO( tecla );
+  3567  06B6                     ;main.c: 259:                             putFIFO( tecla );
   3568                           	movf	(main@tecla),w
   3569  06B6  0853               	fcall	_putFIFO
   3570  06B7  120A  118A  20A9  120A  118A  	goto	l2081
-  3571  06BC  2FCA               	line	261
-  3572                           ;main.c: 261:                         else
+  3571  06BC  2FCA               	line	260
+  3572                           ;main.c: 260:                         else
   3573                           	
   3574                           l255:	
-  3575  06BD                     	line	262
+  3575  06BD                     	line	261
   3576                           	
   3577                           l2023:	
-  3578  06BD                     ;main.c: 262:                             putFIFO( tecla | 0x20 );
+  3578  06BD                     ;main.c: 261:                             putFIFO( tecla | 0x20 );
   3579                           	bcf	status, 5	;RP0=0, select bank0
   3580  06BD  1283               	bcf	status, 6	;RP1=0, select bank0
   3581  06BE  1303               	movf	(main@tecla),w
@@ -3650,48 +3650,48 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3584  06C1  120A  118A  20A9  120A  118A  	goto	l2081
   3585  06C6  2FCA               	
   3586                           l256:	
-  3587  06C7                     	line	263
-  3588                           ;main.c: 263:                         break;
+  3587  06C7                     	line	262
+  3588                           ;main.c: 262:                         break;
   3589                           	goto	l2081
-  3590  06C7  2FCA               	line	264
-  3591                           ;main.c: 264:                 case 'B':
+  3590  06C7  2FCA               	line	263
+  3591                           ;main.c: 263:                 case 'B':
   3592                           	
   3593                           l258:	
-  3594  06C8                     	line	265
+  3594  06C8                     	line	264
   3595                           	
   3596                           l2025:	
-  3597  06C8                     ;main.c: 265:                         ++b;
+  3597  06C8                     ;main.c: 264:                         ++b;
   3598                           	movlw	low(01h)
   3599  06C8  3001               	bcf	status, 5	;RP0=0, select bank0
   3600  06C9  1283               	bcf	status, 6	;RP1=0, select bank0
   3601  06CA  1303               	movwf	(??_main+0)+0
   3602  06CB  00CA               	movf	(??_main+0)+0,w
   3603  06CC  084A               	addwf	(main@b),f
-  3604  06CD  07CE               	line	266
+  3604  06CD  07CE               	line	265
   3605                           	
   3606                           l2027:	
-  3607  06CE                     ;main.c: 266:                         if( b % 2 )
+  3607  06CE                     ;main.c: 265:                         if( b % 2 )
   3608                           	btfss	(main@b),(0)&7
   3609  06CE  1C4E               	goto	u1181
   3610  06CF  2ED1               	goto	u1180
   3611  06D0  2ED2               u1181:
   3612  06D1                     	goto	l2031
   3613  06D1  2ED9               u1180:
-  3614  06D2                     	line	267
+  3614  06D2                     	line	266
   3615                           	
   3616                           l2029:	
-  3617  06D2                     ;main.c: 267:                             putFIFO( tecla );
+  3617  06D2                     ;main.c: 266:                             putFIFO( tecla );
   3618                           	movf	(main@tecla),w
   3619  06D2  0853               	fcall	_putFIFO
   3620  06D3  120A  118A  20A9  120A  118A  	goto	l2081
-  3621  06D8  2FCA               	line	268
-  3622                           ;main.c: 268:                         else
+  3621  06D8  2FCA               	line	267
+  3622                           ;main.c: 267:                         else
   3623                           	
   3624                           l259:	
-  3625  06D9                     	line	269
+  3625  06D9                     	line	268
   3626                           	
   3627                           l2031:	
-  3628  06D9                     ;main.c: 269:                             putFIFO( tecla | 0x20 );
+  3628  06D9                     ;main.c: 268:                             putFIFO( tecla | 0x20 );
   3629                           	bcf	status, 5	;RP0=0, select bank0
   3630  06D9  1283               	bcf	status, 6	;RP1=0, select bank0
   3631  06DA  1303               	movf	(main@tecla),w
@@ -3700,48 +3700,48 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3634  06DD  120A  118A  20A9  120A  118A  	goto	l2081
   3635  06E2  2FCA               	
   3636                           l260:	
-  3637  06E3                     	line	270
-  3638                           ;main.c: 270:                         break;
+  3637  06E3                     	line	269
+  3638                           ;main.c: 269:                         break;
   3639                           	goto	l2081
-  3640  06E3  2FCA               	line	271
-  3641                           ;main.c: 271:                 case 'C':
+  3640  06E3  2FCA               	line	270
+  3641                           ;main.c: 270:                 case 'C':
   3642                           	
   3643                           l261:	
-  3644  06E4                     	line	272
+  3644  06E4                     	line	271
   3645                           	
   3646                           l2033:	
-  3647  06E4                     ;main.c: 272:                         ++c;
+  3647  06E4                     ;main.c: 271:                         ++c;
   3648                           	movlw	low(01h)
   3649  06E4  3001               	bcf	status, 5	;RP0=0, select bank0
   3650  06E5  1283               	bcf	status, 6	;RP1=0, select bank0
   3651  06E6  1303               	movwf	(??_main+0)+0
   3652  06E7  00CA               	movf	(??_main+0)+0,w
   3653  06E8  084A               	addwf	(main@c),f
-  3654  06E9  07CF               	line	273
+  3654  06E9  07CF               	line	272
   3655                           	
   3656                           l2035:	
-  3657  06EA                     ;main.c: 273:                         if( c % 2 )
+  3657  06EA                     ;main.c: 272:                         if( c % 2 )
   3658                           	btfss	(main@c),(0)&7
   3659  06EA  1C4F               	goto	u1191
   3660  06EB  2EED               	goto	u1190
   3661  06EC  2EEE               u1191:
   3662  06ED                     	goto	l2039
   3663  06ED  2EF5               u1190:
-  3664  06EE                     	line	274
+  3664  06EE                     	line	273
   3665                           	
   3666                           l2037:	
-  3667  06EE                     ;main.c: 274:                             putFIFO( tecla );
+  3667  06EE                     ;main.c: 273:                             putFIFO( tecla );
   3668                           	movf	(main@tecla),w
   3669  06EE  0853               	fcall	_putFIFO
   3670  06EF  120A  118A  20A9  120A  118A  	goto	l2081
-  3671  06F4  2FCA               	line	275
-  3672                           ;main.c: 275:                         else
+  3671  06F4  2FCA               	line	274
+  3672                           ;main.c: 274:                         else
   3673                           	
   3674                           l262:	
-  3675  06F5                     	line	276
+  3675  06F5                     	line	275
   3676                           	
   3677                           l2039:	
-  3678  06F5                     ;main.c: 276:                             putFIFO( tecla | 0x20 );
+  3678  06F5                     ;main.c: 275:                             putFIFO( tecla | 0x20 );
   3679                           	bcf	status, 5	;RP0=0, select bank0
   3680  06F5  1283               	bcf	status, 6	;RP1=0, select bank0
   3681  06F6  1303               	movf	(main@tecla),w
@@ -3750,48 +3750,48 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3684  06F9  120A  118A  20A9  120A  118A  	goto	l2081
   3685  06FE  2FCA               	
   3686                           l263:	
-  3687  06FF                     	line	277
-  3688                           ;main.c: 277:                         break;
+  3687  06FF                     	line	276
+  3688                           ;main.c: 276:                         break;
   3689                           	goto	l2081
-  3690  06FF  2FCA               	line	278
-  3691                           ;main.c: 278:                 case 'D':
+  3690  06FF  2FCA               	line	277
+  3691                           ;main.c: 277:                 case 'D':
   3692                           	
   3693                           l264:	
-  3694  0700                     	line	279
+  3694  0700                     	line	278
   3695                           	
   3696                           l2041:	
-  3697  0700                     ;main.c: 279:                         ++d;
+  3697  0700                     ;main.c: 278:                         ++d;
   3698                           	movlw	low(01h)
   3699  0700  3001               	bcf	status, 5	;RP0=0, select bank0
   3700  0701  1283               	bcf	status, 6	;RP1=0, select bank0
   3701  0702  1303               	movwf	(??_main+0)+0
   3702  0703  00CA               	movf	(??_main+0)+0,w
   3703  0704  084A               	addwf	(main@d),f
-  3704  0705  07D0               	line	280
+  3704  0705  07D0               	line	279
   3705                           	
   3706                           l2043:	
-  3707  0706                     ;main.c: 280:                         if( d % 2 )
+  3707  0706                     ;main.c: 279:                         if( d % 2 )
   3708                           	btfss	(main@d),(0)&7
   3709  0706  1C50               	goto	u1201
   3710  0707  2F09               	goto	u1200
   3711  0708  2F0A               u1201:
   3712  0709                     	goto	l2047
   3713  0709  2F11               u1200:
-  3714  070A                     	line	281
+  3714  070A                     	line	280
   3715                           	
   3716                           l2045:	
-  3717  070A                     ;main.c: 281:                             putFIFO( tecla );
+  3717  070A                     ;main.c: 280:                             putFIFO( tecla );
   3718                           	movf	(main@tecla),w
   3719  070A  0853               	fcall	_putFIFO
   3720  070B  120A  118A  20A9  120A  118A  	goto	l2081
-  3721  0710  2FCA               	line	282
-  3722                           ;main.c: 282:                         else
+  3721  0710  2FCA               	line	281
+  3722                           ;main.c: 281:                         else
   3723                           	
   3724                           l265:	
-  3725  0711                     	line	283
+  3725  0711                     	line	282
   3726                           	
   3727                           l2047:	
-  3728  0711                     ;main.c: 283:                             putFIFO( tecla | 0x20 );
+  3728  0711                     ;main.c: 282:                             putFIFO( tecla | 0x20 );
   3729                           	bcf	status, 5	;RP0=0, select bank0
   3730  0711  1283               	bcf	status, 6	;RP1=0, select bank0
   3731  0712  1303               	movf	(main@tecla),w
@@ -3800,111 +3800,111 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3734  0715  120A  118A  20A9  120A  118A  	goto	l2081
   3735  071A  2FCA               	
   3736                           l266:	
-  3737  071B                     	line	284
-  3738                           ;main.c: 284:                         break;
+  3737  071B                     	line	283
+  3738                           ;main.c: 283:                         break;
   3739                           	goto	l2081
-  3740  071B  2FCA               	line	285
-  3741                           ;main.c: 285:                 case '0':
+  3740  071B  2FCA               	line	284
+  3741                           ;main.c: 284:                 case '0':
   3742                           	
   3743                           l267:	
-  3744  071C                     	line	286
+  3744  071C                     	line	285
   3745                           	
   3746                           l2049:	
-  3747  071C                     ;main.c: 286:                         clearLCD();
+  3747  071C                     ;main.c: 285:                         clearLCD();
   3748                           	fcall	_clearLCD
-  3749  071C  120A  118A  2083  120A  118A  	line	287
+  3749  071C  120A  118A  2083  120A  118A  	line	286
   3750                           	
   3751                           l2051:	
-  3752  0721                     ;main.c: 287:                         a = b = c = d = 0;
+  3752  0721                     ;main.c: 286:                         a = b = c = d = 0;
   3753                           	bcf	status, 5	;RP0=0, select bank0
   3754  0721  1283               	bcf	status, 6	;RP1=0, select bank0
   3755  0722  1303               	clrf	(main@d)
   3756  0723  01D0               	clrf	(main@c)
   3757  0724  01CF               	clrf	(main@b)
   3758  0725  01CE               	clrf	(main@a)
-  3759  0726  01CD               	line	288
+  3759  0726  01CD               	line	287
   3760                           	
   3761                           l2053:	
-  3762  0727                     ;main.c: 288:                         atuador.ABCD = 0;
+  3762  0727                     ;main.c: 287:                         atuador.ABCD = 0;
   3763                           	clrf	(main@atuador)
-  3764  0727  01D1               	line	289
+  3764  0727  01D1               	line	288
   3765                           	
   3766                           l2055:	
-  3767  0728                     ;main.c: 289:                         resetFIFO();
+  3767  0728                     ;main.c: 288:                         resetFIFO();
   3768                           	fcall	_resetFIFO
-  3769  0728  120A  118A  2092  120A  118A  	line	290
+  3769  0728  120A  118A  2092  120A  118A  	line	289
   3770                           	
   3771                           l2057:	
-  3772  072D                     ;main.c: 290:                         estado = 0;
+  3772  072D                     ;main.c: 289:                         estado = 0;
   3773                           	bcf	status, 5	;RP0=0, select bank0
   3774  072D  1283               	bcf	status, 6	;RP1=0, select bank0
   3775  072E  1303               	clrf	(main@estado)
   3776  072F  01D4               	clrf	(main@estado+1)
-  3777  0730  01D5               	line	291
-  3778                           ;main.c: 291:                         break;
+  3777  0730  01D5               	line	290
+  3778                           ;main.c: 290:                         break;
   3779                           	goto	l2081
-  3780  0731  2FCA               	line	292
-  3781                           ;main.c: 292:                 case '1':
+  3780  0731  2FCA               	line	291
+  3781                           ;main.c: 291:                 case '1':
   3782                           	
   3783                           l268:	
   3784  0732                     	goto	l2059
-  3785  0732  2F3A               	line	293
-  3786                           ;main.c: 293:                 case '2':
+  3785  0732  2F3A               	line	292
+  3786                           ;main.c: 292:                 case '2':
   3787                           	
   3788                           l269:	
   3789  0733                     	goto	l2059
-  3790  0733  2F3A               	line	294
-  3791                           ;main.c: 294:                 case '3':
+  3790  0733  2F3A               	line	293
+  3791                           ;main.c: 293:                 case '3':
   3792                           	
   3793                           l270:	
   3794  0734                     	goto	l2059
-  3795  0734  2F3A               	line	295
-  3796                           ;main.c: 295:                 case '4':
+  3795  0734  2F3A               	line	294
+  3796                           ;main.c: 294:                 case '4':
   3797                           	
   3798                           l271:	
   3799  0735                     	goto	l2059
-  3800  0735  2F3A               	line	296
-  3801                           ;main.c: 296:                 case '5':
+  3800  0735  2F3A               	line	295
+  3801                           ;main.c: 295:                 case '5':
   3802                           	
   3803                           l272:	
   3804  0736                     	goto	l2059
-  3805  0736  2F3A               	line	297
-  3806                           ;main.c: 297:                 case '6':
+  3805  0736  2F3A               	line	296
+  3806                           ;main.c: 296:                 case '6':
   3807                           	
   3808                           l273:	
   3809  0737                     	goto	l2059
-  3810  0737  2F3A               	line	298
-  3811                           ;main.c: 298:                 case '7':
+  3810  0737  2F3A               	line	297
+  3811                           ;main.c: 297:                 case '7':
   3812                           	
   3813                           l274:	
   3814  0738                     	goto	l2059
-  3815  0738  2F3A               	line	299
-  3816                           ;main.c: 299:                 case '8':
+  3815  0738  2F3A               	line	298
+  3816                           ;main.c: 298:                 case '8':
   3817                           	
   3818                           l275:	
   3819  0739                     	goto	l2059
-  3820  0739  2F3A               	line	300
-  3821                           ;main.c: 300:                 case '9':
+  3820  0739  2F3A               	line	299
+  3821                           ;main.c: 299:                 case '9':
   3822                           	
   3823                           l276:	
-  3824  073A                     	line	301
+  3824  073A                     	line	300
   3825                           	
   3826                           l2059:	
-  3827  073A                     ;main.c: 301:                         putFIFO(tecla);
+  3827  073A                     ;main.c: 300:                         putFIFO(tecla);
   3828                           	movf	(main@tecla),w
   3829  073A  0853               	fcall	_putFIFO
-  3830  073B  120A  118A  20A9  120A  118A  	line	302
-  3831                           ;main.c: 302:                         break;
+  3830  073B  120A  118A  20A9  120A  118A  	line	301
+  3831                           ;main.c: 301:                         break;
   3832                           	goto	l2081
-  3833  0740  2FCA               	line	303
-  3834                           ;main.c: 303:                 case '*':
+  3833  0740  2FCA               	line	302
+  3834                           ;main.c: 302:                 case '*':
   3835                           	
   3836                           l277:	
-  3837  0741                     	line	304
-  3838                           ;main.c: 304:                         switch( delFIFO(1) )
+  3837  0741                     	line	303
+  3838                           ;main.c: 303:                         switch( delFIFO(1) )
   3839                           	goto	l2071
-  3840  0741  2F59               	line	306
-  3841                           ;main.c: 305:                         {;main.c: 306:                             case 'A
+  3840  0741  2F59               	line	305
+  3841                           ;main.c: 304:                         {;main.c: 305:                             case 'A
                                  ': a = 0; break;
   3842                           	
   3843                           l279:	
@@ -3914,62 +3914,62 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3847  0742  1283               	bcf	status, 6	;RP1=0, select bank0
   3848  0743  1303               	clrf	(main@a)
   3849  0744  01CD               	goto	l2073
-  3850  0745  2F82               	line	307
-  3851                           ;main.c: 307:                             case 'a': a = 1; break;
+  3850  0745  2F82               	line	306
+  3851                           ;main.c: 306:                             case 'a': a = 1; break;
   3852                           	
   3853                           l281:	
   3854  0746                     	clrf	(main@a)
   3855  0746  01CD               	incf	(main@a),f
   3856  0747  0ACD               	goto	l2073
-  3857  0748  2F82               	line	308
-  3858                           ;main.c: 308:                             case 'B': b = 0; break;
+  3857  0748  2F82               	line	307
+  3858                           ;main.c: 307:                             case 'B': b = 0; break;
   3859                           	
   3860                           l282:	
   3861  0749                     	
   3862                           l2063:	
   3863  0749                     	clrf	(main@b)
   3864  0749  01CE               	goto	l2073
-  3865  074A  2F82               	line	309
-  3866                           ;main.c: 309:                             case 'b': b = 1; break;
+  3865  074A  2F82               	line	308
+  3866                           ;main.c: 308:                             case 'b': b = 1; break;
   3867                           	
   3868                           l283:	
   3869  074B                     	clrf	(main@b)
   3870  074B  01CE               	incf	(main@b),f
   3871  074C  0ACE               	goto	l2073
-  3872  074D  2F82               	line	310
-  3873                           ;main.c: 310:                             case 'C': c = 0; break;
+  3872  074D  2F82               	line	309
+  3873                           ;main.c: 309:                             case 'C': c = 0; break;
   3874                           	
   3875                           l284:	
   3876  074E                     	
   3877                           l2065:	
   3878  074E                     	clrf	(main@c)
   3879  074E  01CF               	goto	l2073
-  3880  074F  2F82               	line	311
-  3881                           ;main.c: 311:                             case 'c': c = 1; break;
+  3880  074F  2F82               	line	310
+  3881                           ;main.c: 310:                             case 'c': c = 1; break;
   3882                           	
   3883                           l285:	
   3884  0750                     	clrf	(main@c)
   3885  0750  01CF               	incf	(main@c),f
   3886  0751  0ACF               	goto	l2073
-  3887  0752  2F82               	line	312
-  3888                           ;main.c: 312:                             case 'D': d = 0; break;
+  3887  0752  2F82               	line	311
+  3888                           ;main.c: 311:                             case 'D': d = 0; break;
   3889                           	
   3890                           l286:	
   3891  0753                     	
   3892                           l2067:	
   3893  0753                     	clrf	(main@d)
   3894  0753  01D0               	goto	l2073
-  3895  0754  2F82               	line	313
-  3896                           ;main.c: 313:                             case 'd': d = 1; break;
+  3895  0754  2F82               	line	312
+  3896                           ;main.c: 312:                             case 'd': d = 1; break;
   3897                           	
   3898                           l287:	
   3899  0755                     	clrf	(main@d)
   3900  0755  01D0               	incf	(main@d),f
   3901  0756  0AD0               	goto	l2073
-  3902  0757  2F82               	line	314
+  3902  0757  2F82               	line	313
   3903                           	
   3904                           l2069:	
-  3905  0758                     ;main.c: 314:                         }
+  3905  0758                     ;main.c: 313:                         }
   3906                           	goto	l2073
   3907  0758  2F82               	
   3908                           l278:	
@@ -4043,35 +4043,35 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   3975                           
   3976                           	
   3977                           l280:	
-  3978  0782                     	line	315
+  3978  0782                     	line	314
   3979                           	
   3980                           l2073:	
-  3981  0782                     ;main.c: 315:                         clearLCD();
+  3981  0782                     ;main.c: 314:                         clearLCD();
   3982                           	fcall	_clearLCD
-  3983  0782  120A  118A  2083  120A  118A  	line	316
-  3984                           ;main.c: 316:                         break;
+  3983  0782  120A  118A  2083  120A  118A  	line	315
+  3984                           ;main.c: 315:                         break;
   3985                           	goto	l2081
-  3986  0787  2FCA               	line	317
-  3987                           ;main.c: 317:                 case '#':
+  3986  0787  2FCA               	line	316
+  3987                           ;main.c: 316:                 case '#':
   3988                           	
   3989                           l288:	
-  3990  0788                     	line	318
+  3990  0788                     	line	317
   3991                           	
   3992                           l2075:	
-  3993  0788                     ;main.c: 318:                         estado = 10;
+  3993  0788                     ;main.c: 317:                         estado = 10;
   3994                           	movlw	0Ah
   3995  0788  300A               	bcf	status, 5	;RP0=0, select bank0
   3996  0789  1283               	bcf	status, 6	;RP1=0, select bank0
   3997  078A  1303               	movwf	(main@estado)
   3998  078B  00D4               	movlw	0
   3999  078C  3000               	movwf	((main@estado))+1
-  4000  078D  00D5               	line	319
-  4001                           ;main.c: 319:                         break;
+  4000  078D  00D5               	line	318
+  4001                           ;main.c: 318:                         break;
   4002                           	goto	l2081
-  4003  078E  2FCA               	line	320
+  4003  078E  2FCA               	line	319
   4004                           	
   4005                           l2077:	
-  4006  078F                     ;main.c: 320:             }
+  4006  078F                     ;main.c: 319:             }
   4007                           	goto	l2081
   4008  078F  2FCA               	
   4009                           l253:	
@@ -4166,10 +4166,10 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   4097                           
   4098                           	
   4099                           l257:	
-  4100  07CA                     	line	321
+  4100  07CA                     	line	320
   4101                           	
   4102                           l2081:	
-  4103  07CA                     ;main.c: 321:             writeLCD(0,1, displayFIFO() );
+  4103  07CA                     ;main.c: 320:             writeLCD(0,1, displayFIFO() );
   4104                           	clrf	(writeLCD@y)
   4105  07CA  01F8               	incf	(writeLCD@y),f
   4106  07CB  0AF8               	fcall	_displayFIFO
@@ -4179,24 +4179,24 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   4110  07D3  00FA               	movlw	low(0)
   4111  07D4  3000               	fcall	_writeLCD
   4112  07D5  120A  118A  216B  120A  118A  	goto	l2083
-  4113  07DA  2FDB               	line	322
-  4114                           ;main.c: 322:         }
+  4113  07DA  2FDB               	line	321
+  4114                           ;main.c: 321:         }
   4115                           	
   4116                           l252:	
-  4117  07DB                     	line	323
+  4117  07DB                     	line	322
   4118                           	
   4119                           l2083:	
-  4120  07DB                     ;main.c: 323:         serialIOscan();
+  4120  07DB                     ;main.c: 322:         serialIOscan();
   4121                           	fcall	_serialIOscan
   4122  07DB  120A  118A  2240  120A  118A  	goto	l1865
-  4123  07E0  2BC2               	line	324
-  4124                           ;main.c: 324:     }
+  4123  07E0  2BC2               	line	323
+  4124                           ;main.c: 323:     }
   4125                           	
   4126                           l289:	
   4127  07E1                     	goto	l1865
   4128  07E1  2BC2               	
   4129                           l290:	
-  4130  07E2                     	line	325
+  4130  07E2                     	line	324
   4131                           	
   4132                           l291:	
   4133  07E2                     	global	start
@@ -6947,7 +6947,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.00 build -1524193055 
-Symbol Table                                                                                   Thu Nov 21 15:06:09 2019
+Symbol Table                                                                                   Thu Nov 21 16:52:05 2019
 
               ?_displayFIFO 0070                           l9 00B6                           pc 0002  
                         l12 011C                          l13 011E                          l22 0131  

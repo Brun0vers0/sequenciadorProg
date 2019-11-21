@@ -984,209 +984,209 @@ Version 4.0 HI-TECH Software Intermediate Code
 "253
 [; ;main.c: 253:             tecla = currentKey();
 [e = _tecla ( _currentKey ..  ]
-"255
-[; ;main.c: 255:             switch(tecla)
+"254
+[; ;main.c: 254:             switch(tecla)
 [e $U 231  ]
-"256
-[; ;main.c: 256:             {
+"255
+[; ;main.c: 255:             {
 {
-"257
-[; ;main.c: 257:                 case 'A':
+"256
+[; ;main.c: 256:                 case 'A':
 [e :U 232 ]
-"258
-[; ;main.c: 258:                         ++a;
+"257
+[; ;main.c: 257:                         ++a;
 [e =+ _a -> -> 1 `i `uc ]
-"259
-[; ;main.c: 259:                         if( a % 2 )
+"258
+[; ;main.c: 258:                         if( a % 2 )
 [e $ ! != % -> _a `i -> 2 `i -> 0 `i 233  ]
-"260
-[; ;main.c: 260:                             putFIFO( tecla );
+"259
+[; ;main.c: 259:                             putFIFO( tecla );
 [e ( _putFIFO (1 _tecla ]
 [e $U 234  ]
-"261
-[; ;main.c: 261:                         else
+"260
+[; ;main.c: 260:                         else
 [e :U 233 ]
-"262
-[; ;main.c: 262:                             putFIFO( tecla | 0x20 );
+"261
+[; ;main.c: 261:                             putFIFO( tecla | 0x20 );
 [e ( _putFIFO (1 -> | -> _tecla `i -> 32 `i `uc ]
 [e :U 234 ]
-"263
-[; ;main.c: 263:                         break;
+"262
+[; ;main.c: 262:                         break;
 [e $U 230  ]
-"264
-[; ;main.c: 264:                 case 'B':
+"263
+[; ;main.c: 263:                 case 'B':
 [e :U 235 ]
-"265
-[; ;main.c: 265:                         ++b;
+"264
+[; ;main.c: 264:                         ++b;
 [e =+ _b -> -> 1 `i `uc ]
-"266
-[; ;main.c: 266:                         if( b % 2 )
+"265
+[; ;main.c: 265:                         if( b % 2 )
 [e $ ! != % -> _b `i -> 2 `i -> 0 `i 236  ]
-"267
-[; ;main.c: 267:                             putFIFO( tecla );
+"266
+[; ;main.c: 266:                             putFIFO( tecla );
 [e ( _putFIFO (1 _tecla ]
 [e $U 237  ]
-"268
-[; ;main.c: 268:                         else
+"267
+[; ;main.c: 267:                         else
 [e :U 236 ]
-"269
-[; ;main.c: 269:                             putFIFO( tecla | 0x20 );
+"268
+[; ;main.c: 268:                             putFIFO( tecla | 0x20 );
 [e ( _putFIFO (1 -> | -> _tecla `i -> 32 `i `uc ]
 [e :U 237 ]
-"270
-[; ;main.c: 270:                         break;
+"269
+[; ;main.c: 269:                         break;
 [e $U 230  ]
-"271
-[; ;main.c: 271:                 case 'C':
+"270
+[; ;main.c: 270:                 case 'C':
 [e :U 238 ]
-"272
-[; ;main.c: 272:                         ++c;
+"271
+[; ;main.c: 271:                         ++c;
 [e =+ _c -> -> 1 `i `uc ]
-"273
-[; ;main.c: 273:                         if( c % 2 )
+"272
+[; ;main.c: 272:                         if( c % 2 )
 [e $ ! != % -> _c `i -> 2 `i -> 0 `i 239  ]
-"274
-[; ;main.c: 274:                             putFIFO( tecla );
+"273
+[; ;main.c: 273:                             putFIFO( tecla );
 [e ( _putFIFO (1 _tecla ]
 [e $U 240  ]
-"275
-[; ;main.c: 275:                         else
+"274
+[; ;main.c: 274:                         else
 [e :U 239 ]
-"276
-[; ;main.c: 276:                             putFIFO( tecla | 0x20 );
+"275
+[; ;main.c: 275:                             putFIFO( tecla | 0x20 );
 [e ( _putFIFO (1 -> | -> _tecla `i -> 32 `i `uc ]
 [e :U 240 ]
-"277
-[; ;main.c: 277:                         break;
+"276
+[; ;main.c: 276:                         break;
 [e $U 230  ]
-"278
-[; ;main.c: 278:                 case 'D':
+"277
+[; ;main.c: 277:                 case 'D':
 [e :U 241 ]
-"279
-[; ;main.c: 279:                         ++d;
+"278
+[; ;main.c: 278:                         ++d;
 [e =+ _d -> -> 1 `i `uc ]
-"280
-[; ;main.c: 280:                         if( d % 2 )
+"279
+[; ;main.c: 279:                         if( d % 2 )
 [e $ ! != % -> _d `i -> 2 `i -> 0 `i 242  ]
-"281
-[; ;main.c: 281:                             putFIFO( tecla );
+"280
+[; ;main.c: 280:                             putFIFO( tecla );
 [e ( _putFIFO (1 _tecla ]
 [e $U 243  ]
-"282
-[; ;main.c: 282:                         else
+"281
+[; ;main.c: 281:                         else
 [e :U 242 ]
-"283
-[; ;main.c: 283:                             putFIFO( tecla | 0x20 );
+"282
+[; ;main.c: 282:                             putFIFO( tecla | 0x20 );
 [e ( _putFIFO (1 -> | -> _tecla `i -> 32 `i `uc ]
 [e :U 243 ]
+"283
+[; ;main.c: 283:                         break;
+[e $U 230  ]
 "284
-[; ;main.c: 284:                         break;
-[e $U 230  ]
-"285
-[; ;main.c: 285:                 case '0':
+[; ;main.c: 284:                 case '0':
 [e :U 244 ]
-"286
-[; ;main.c: 286:                         clearLCD();
+"285
+[; ;main.c: 285:                         clearLCD();
 [e ( _clearLCD ..  ]
-"287
-[; ;main.c: 287:                         a = b = c = d = 0;
+"286
+[; ;main.c: 286:                         a = b = c = d = 0;
 [e = _a = _b = _c = _d -> -> 0 `i `uc ]
-"288
-[; ;main.c: 288:                         atuador.ABCD = 0;
+"287
+[; ;main.c: 287:                         atuador.ABCD = 0;
 [e = . _atuador 1 -> -> 0 `i `uc ]
-"289
-[; ;main.c: 289:                         resetFIFO();
+"288
+[; ;main.c: 288:                         resetFIFO();
 [e ( _resetFIFO ..  ]
-"290
-[; ;main.c: 290:                         estado = 0;
+"289
+[; ;main.c: 289:                         estado = 0;
 [e = _estado -> 0 `i ]
+"290
+[; ;main.c: 290:                         break;
+[e $U 230  ]
 "291
-[; ;main.c: 291:                         break;
-[e $U 230  ]
-"292
-[; ;main.c: 292:                 case '1':
+[; ;main.c: 291:                 case '1':
 [e :U 245 ]
-"293
-[; ;main.c: 293:                 case '2':
+"292
+[; ;main.c: 292:                 case '2':
 [e :U 246 ]
-"294
-[; ;main.c: 294:                 case '3':
+"293
+[; ;main.c: 293:                 case '3':
 [e :U 247 ]
-"295
-[; ;main.c: 295:                 case '4':
+"294
+[; ;main.c: 294:                 case '4':
 [e :U 248 ]
-"296
-[; ;main.c: 296:                 case '5':
+"295
+[; ;main.c: 295:                 case '5':
 [e :U 249 ]
-"297
-[; ;main.c: 297:                 case '6':
+"296
+[; ;main.c: 296:                 case '6':
 [e :U 250 ]
-"298
-[; ;main.c: 298:                 case '7':
+"297
+[; ;main.c: 297:                 case '7':
 [e :U 251 ]
-"299
-[; ;main.c: 299:                 case '8':
+"298
+[; ;main.c: 298:                 case '8':
 [e :U 252 ]
-"300
-[; ;main.c: 300:                 case '9':
+"299
+[; ;main.c: 299:                 case '9':
 [e :U 253 ]
-"301
-[; ;main.c: 301:                         putFIFO(tecla);
+"300
+[; ;main.c: 300:                         putFIFO(tecla);
 [e ( _putFIFO (1 _tecla ]
-"302
-[; ;main.c: 302:                         break;
+"301
+[; ;main.c: 301:                         break;
 [e $U 230  ]
-"303
-[; ;main.c: 303:                 case '*':
+"302
+[; ;main.c: 302:                 case '*':
 [e :U 254 ]
-"304
-[; ;main.c: 304:                         switch( delFIFO(1) )
+"303
+[; ;main.c: 303:                         switch( delFIFO(1) )
 [e $U 256  ]
-"305
-[; ;main.c: 305:                         {
+"304
+[; ;main.c: 304:                         {
 {
-"306
-[; ;main.c: 306:                             case 'A': a = 0; break;
+"305
+[; ;main.c: 305:                             case 'A': a = 0; break;
 [e :U 257 ]
 [e = _a -> -> 0 `i `uc ]
 [e $U 255  ]
-"307
-[; ;main.c: 307:                             case 'a': a = 1; break;
+"306
+[; ;main.c: 306:                             case 'a': a = 1; break;
 [e :U 258 ]
 [e = _a -> -> 1 `i `uc ]
 [e $U 255  ]
-"308
-[; ;main.c: 308:                             case 'B': b = 0; break;
+"307
+[; ;main.c: 307:                             case 'B': b = 0; break;
 [e :U 259 ]
 [e = _b -> -> 0 `i `uc ]
 [e $U 255  ]
-"309
-[; ;main.c: 309:                             case 'b': b = 1; break;
+"308
+[; ;main.c: 308:                             case 'b': b = 1; break;
 [e :U 260 ]
 [e = _b -> -> 1 `i `uc ]
 [e $U 255  ]
-"310
-[; ;main.c: 310:                             case 'C': c = 0; break;
+"309
+[; ;main.c: 309:                             case 'C': c = 0; break;
 [e :U 261 ]
 [e = _c -> -> 0 `i `uc ]
 [e $U 255  ]
-"311
-[; ;main.c: 311:                             case 'c': c = 1; break;
+"310
+[; ;main.c: 310:                             case 'c': c = 1; break;
 [e :U 262 ]
 [e = _c -> -> 1 `i `uc ]
 [e $U 255  ]
-"312
-[; ;main.c: 312:                             case 'D': d = 0; break;
+"311
+[; ;main.c: 311:                             case 'D': d = 0; break;
 [e :U 263 ]
 [e = _d -> -> 0 `i `uc ]
 [e $U 255  ]
-"313
-[; ;main.c: 313:                             case 'd': d = 1; break;
+"312
+[; ;main.c: 312:                             case 'd': d = 1; break;
 [e :U 264 ]
 [e = _d -> -> 1 `i `uc ]
 [e $U 255  ]
-"314
-[; ;main.c: 314:                         }
+"313
+[; ;main.c: 313:                         }
 }
 [e $U 255  ]
 [e :U 256 ]
@@ -1200,23 +1200,23 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 100 `ui `i 264
  255 ]
 [e :U 255 ]
-"315
-[; ;main.c: 315:                         clearLCD();
+"314
+[; ;main.c: 314:                         clearLCD();
 [e ( _clearLCD ..  ]
+"315
+[; ;main.c: 315:                         break;
+[e $U 230  ]
 "316
-[; ;main.c: 316:                         break;
-[e $U 230  ]
-"317
-[; ;main.c: 317:                 case '#':
+[; ;main.c: 316:                 case '#':
 [e :U 265 ]
-"318
-[; ;main.c: 318:                         estado = 10;
+"317
+[; ;main.c: 317:                         estado = 10;
 [e = _estado -> 10 `i ]
-"319
-[; ;main.c: 319:                         break;
+"318
+[; ;main.c: 318:                         break;
 [e $U 230  ]
-"320
-[; ;main.c: 320:             }
+"319
+[; ;main.c: 319:             }
 }
 [e $U 230  ]
 [e :U 231 ]
@@ -1238,23 +1238,23 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 35 `ui `i 265
  230 ]
 [e :U 230 ]
-"321
-[; ;main.c: 321:             writeLCD(0,1, displayFIFO() );
+"320
+[; ;main.c: 320:             writeLCD(0,1, displayFIFO() );
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 1 `i `uc -> ( _displayFIFO ..  `*Cuc ]
-"322
-[; ;main.c: 322:         }
+"321
+[; ;main.c: 321:         }
 }
 [e :U 229 ]
-"323
-[; ;main.c: 323:         serialIOscan();
+"322
+[; ;main.c: 322:         serialIOscan();
 [e ( _serialIOscan ..  ]
-"324
-[; ;main.c: 324:     }
+"323
+[; ;main.c: 323:     }
 }
 [e :U 147 ]
 [e $U 148  ]
 [e :U 149 ]
-"325
-[; ;main.c: 325: }
+"324
+[; ;main.c: 324: }
 [e :UE 146 ]
 }

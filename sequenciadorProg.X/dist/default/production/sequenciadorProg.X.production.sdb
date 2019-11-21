@@ -193,7 +193,7 @@
 [v main@c c `uc  1 a 1 8 ]
 [v main@b b `uc  1 a 1 7 ]
 [v main@a a `uc  1 a 1 6 ]
-"325
+"324
 } 0
 "76 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\serialIO.c
 [v _serialIOscan serialIOscan `(v  1 e 1 0 ]

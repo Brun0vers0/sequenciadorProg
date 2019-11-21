@@ -2793,7 +2793,6 @@ void main(void)
         if( currentKey() && !previousKey() )
         {
             tecla = currentKey();
-
             switch(tecla)
             {
                 case 'A':
