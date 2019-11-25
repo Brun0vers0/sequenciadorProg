@@ -1,27 +1,29 @@
-[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"10 C:\Program Files\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 C:\Program Files\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"19 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\fifo.c
+"19 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\fifo.c
 [v _putFIFO putFIFO `(v  1 e 1 0 ]
 "25
 [v _getFIFO getFIFO `(uc  1 e 1 0 ]
-"47
+"42
 [v _displayFIFO displayFIFO `(*.4v  1 e 1 0 ]
-"52
+"47
 [v _delFIFO delFIFO `(uc  1 e 1 0 ]
-"65
+"60
 [v _resetFIFO resetFIFO `(v  1 e 1 0 ]
-"55 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\keyboard.c
+"67
+[v _restartFIFO restartFIFO `(v  1 e 1 0 ]
+"55 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\keyboard.c
 [v _previousKey previousKey `(uc  1 e 1 0 ]
 "65
 [v _currentKey currentKey `(uc  1 e 1 0 ]
@@ -29,7 +31,7 @@
 [v _keyboardScan keyboardScan `(uc  1 e 1 0 ]
 "103
 [v _initKeyboard initKeyboard `(v  1 e 1 0 ]
-"20 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\lcd.c
+"20 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 "40
 [v _cmdLCD cmdLCD `(v  1 e 1 0 ]
@@ -45,9 +47,9 @@
 [v _screen_car screen_car `(v  1 e 1 0 ]
 "144
 [v _screen_menu screen_menu `(v  1 e 1 0 ]
-"48 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\main.c
+"48 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"45 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\serialIO.c
+"45 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\serialIO.c
 [v _serialIOload serialIOload `(v  1 e 1 0 ]
 "50
 [v _serialIObyteShift serialIObyteShift `(uc  1 e 1 0 ]
@@ -55,7 +57,7 @@
 [v _serialIOscan serialIOscan `(v  1 e 1 0 ]
 "89
 [v _initSerialIO initSerialIO `(v  1 e 1 0 ]
-[s S289 . 1 `uc 1 RA0 1 0 :1:0 
+[s S291 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -64,9 +66,9 @@
 `uc 1 RA6 1 0 :1:6 
 `uc 1 RA7 1 0 :1:7 
 ]
-"183 C:\Program Files\Microchip\xc8\v2.05\pic\include\pic16f887.h
-[u S298 . 1 `S289 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES298  1 e 1 @5 ]
+"183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+[u S300 . 1 `S291 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES300  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 [s S53 . 1 `uc 1 PS 1 0 :3:0 
@@ -83,7 +85,7 @@
 ]
 [u S64 . 1 `S53 1 . 1 0 `S60 1 . 1 0 ]
 [v _OPTION_REGbits OPTION_REGbits `VES64  1 e 1 @129 ]
-[s S331 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S333 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -93,15 +95,15 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1433
-[u S340 . 1 `S331 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES340  1 e 1 @133 ]
+[u S342 . 1 `S333 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES342  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "2346
 [v _WPUB WPUB `VEuc  1 e 1 @149 ]
-[s S310 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S312 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -111,11 +113,11 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3404
-[u S319 . 1 `S310 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES319  1 e 1 @392 ]
+[u S321 . 1 `S312 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES321  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"15 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\fifo.c
+"15 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\fifo.c
 [v _fifo fifo `[16]uc  1 e 16 0 ]
 "16
 [v _fifoHead fifoHead `uc  1 e 1 0 ]
@@ -124,7 +126,7 @@
 [s S40 . 1 `uc 1 rows 1 0 :4:0 
 `uc 1 cols 1 0 :4:4 
 ]
-"35 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\keyboard.c
+"35 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\keyboard.c
 [u S43 . 1 `S40 1 . 1 0 ]
 [v _KEYBOARDbits KEYBOARDbits `VES43  1 e 1 @6 ]
 "39
@@ -139,24 +141,26 @@
 `uc 1 B0 1 0 :1:6 
 `uc 1 B1 1 0 :1:7 
 ]
-"14 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\lcd.c
+"14 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\lcd.c
 [u S104 . 1 `S98 1 . 1 0 ]
 [v _LCD LCD `VES104  1 e 1 @8 ]
-"24 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\serialIO.c
+"16
+[v _indPassosSize indPassosSize `DCuc  1 e 1 0 ]
+"24 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\serialIO.c
 [v _ptrSerialIn ptrSerialIn `*.4uc  1 e 1 0 ]
 "25
 [v _ptrSerialOut ptrSerialOut `*.4uc  1 e 1 0 ]
 "26
 [v _lenSerialIO lenSerialIO `uc  1 e 1 0 ]
-[s S282 . 1 `uc 1 OUT 1 0 :1:0 
+[s S284 . 1 `uc 1 OUT 1 0 :1:0 
 `uc 1 IN 1 0 :1:1 
 `uc 1 CLK 1 0 :1:2 
 `uc 1 SHLD 1 0 :1:3 
 ]
 "41
-[u S287 . 1 `S282 1 . 1 0 ]
-[v _SERIALIO SERIALIO `VES287  1 e 1 @5 ]
-"48 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\main.c
+[u S289 . 1 `S284 1 . 1 0 ]
+[v _SERIALIO SERIALIO `VES289  1 e 1 @5 ]
+"48 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "55
@@ -191,14 +195,14 @@
 [v main@c c `uc  1 a 1 8 ]
 [v main@b b `uc  1 a 1 7 ]
 [v main@a a `uc  1 a 1 6 ]
-"324
+"316
 } 0
-"76 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\serialIO.c
+"76 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\serialIO.c
 [v _serialIOscan serialIOscan `(v  1 e 1 0 ]
 {
 "78
-[v serialIOscan@i i `uc  1 a 1 9 ]
-[v serialIOscan@j j `uc  1 a 1 8 ]
+[v serialIOscan@i i `uc  1 a 1 8 ]
+[v serialIOscan@j j `uc  1 a 1 7 ]
 "86
 } 0
 "45
@@ -220,7 +224,7 @@
 [v serialIObyteShift@dataIn dataIn `uc  1 a 1 1 ]
 "73
 } 0
-"144 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\lcd.c
+"144 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\lcd.c
 [v _screen_menu screen_menu `(v  1 e 1 0 ]
 {
 "147
@@ -272,21 +276,26 @@
 {
 "106
 } 0
-"65 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\fifo.c
-[v _resetFIFO resetFIFO `(v  1 e 1 0 ]
+"67 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\fifo.c
+[v _restartFIFO restartFIFO `(v  1 e 1 0 ]
 {
 "70
 } 0
-"52
+"60
+[v _resetFIFO resetFIFO `(v  1 e 1 0 ]
+{
+"65
+} 0
+"47
 [v _delFIFO delFIFO `(uc  1 e 1 0 ]
 {
 [v delFIFO@n n `uc  1 a 1 wreg ]
-"54
+"49
 [v delFIFO@ret ret `uc  1 a 1 2 ]
-"52
+"47
 [v delFIFO@n n `uc  1 a 1 wreg ]
 [v delFIFO@n n `uc  1 a 1 1 ]
-"63
+"58
 } 0
 "19
 [v _putFIFO putFIFO `(v  1 e 1 0 ]
@@ -297,7 +306,7 @@
 [v putFIFO@c c `uc  1 a 1 1 ]
 "23
 } 0
-"55 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\keyboard.c
+"55 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\keyboard.c
 [v _previousKey previousKey `(uc  1 e 1 0 ]
 {
 "58
@@ -312,7 +321,7 @@
 [v keyboardScan@aux aux `uc  1 a 1 8 ]
 "94
 } 0
-"89 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\serialIO.c
+"89 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\serialIO.c
 [v _initSerialIO initSerialIO `(v  1 e 1 0 ]
 {
 [v initSerialIO@ptrIn ptrIn `*.4uc  1 a 1 wreg ]
@@ -323,7 +332,7 @@
 [v initSerialIO@ptrIn ptrIn `*.4uc  1 a 1 3 ]
 "120
 } 0
-"20 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\lcd.c
+"20 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 {
 "38
@@ -344,24 +353,24 @@
 [v cmdLCD@cmd cmd `uc  1 a 1 2 ]
 "65
 } 0
-"103 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\keyboard.c
+"103 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\keyboard.c
 [v _initKeyboard initKeyboard `(v  1 e 1 0 ]
 {
 "113
 } 0
-"25 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\fifo.c
+"25 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\fifo.c
 [v _getFIFO getFIFO `(uc  1 e 1 0 ]
 {
 "27
 [v getFIFO@aux aux `uc  1 a 1 1 ]
-"40
+"35
 } 0
-"47
+"42
 [v _displayFIFO displayFIFO `(*.4v  1 e 1 0 ]
 {
-"50
+"45
 } 0
-"65 C:\Users\Bruno\Documents\Bruno\MplabX\sequenciadorProg\sequenciadorProg.X\keyboard.c
+"65 Z:\MplabX\SequenciadorProg\sequenciadorProg.X\keyboard.c
 [v _currentKey currentKey `(uc  1 e 1 0 ]
 {
 "68

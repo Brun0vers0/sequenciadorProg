@@ -59,14 +59,7 @@ void main(void)
     initSerialIO(  &sensor, &atuador, 1 );
     atuador.ABCD = 0x00; 
     
-//    while (1)  //programa de testes no hardware
-//    {
-//        atuador.ABCD = 0x00; serialIOscan(); __delay_ms(5000);
-//        atuador.ABCD = 0x01; serialIOscan(); __delay_ms(5000);
-//        atuador.ABCD = 0x0F; serialIOscan(); __delay_ms(5000);
-//        atuador.ABCD = 0x3F; serialIOscan(); __delay_ms(5000);
-//        atuador.ABCD = 0xFF; serialIOscan(); __delay_ms(5000);
-//    }    
+  
     
     
     while( 1 )                      // Laço de repetição infinita.
@@ -147,8 +140,7 @@ void main(void)
                     estado = 131;
                     break;
             case 131:
-                    if( sensor.D1 == 1)
-                        estado = 10;
+                    estado = 10;
                     break;
             case 140:
                     __delay_ms(1000);
@@ -243,8 +235,7 @@ void main(void)
                     estado = 261;
                     break;
             case 261:
-                    if( sensor.D0 == 1)
-                        estado = 10;
+                    estado = 10;
                     break;        
             
         }
@@ -314,6 +305,7 @@ void main(void)
                         clearLCD();
                         break;
                 case '#':
+                        restartFIFO();
                         estado = 10;
                         break;
             }
