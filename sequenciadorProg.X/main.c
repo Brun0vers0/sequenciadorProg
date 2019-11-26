@@ -43,6 +43,22 @@
 #include "fifo.h"
 #include "serialIO.h"
 #include "atuadores.h"
+#include "timer0.h"
+
+
+
+
+//***************** Interrupções
+void __interrupt() irq(void)
+{
+    if( INTCONbits.T0IE && INTCONbits.T0IF )
+    {
+        INTCONbits.T0IF = 0;
+        intt0_1ms();
+    }
+}
+
+
 
 //***************** Programa Principal
 void main(void)
@@ -58,16 +74,14 @@ void main(void)
     initKeyboard();
     initSerialIO(  &sensor, &atuador, 1 );
     atuador.ABCD = 0x00; 
+    initTimer0();
     
   
     
     
     while( 1 )                      // Laço de repetição infinita.
     {
-        
-//            checktecla ();
-
-        
+//      checktecla ();
         keyboardScan();
         screen_menu ();
         switch( estado )
