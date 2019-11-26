@@ -51,11 +51,7 @@
 //***************** Interrupções
 void __interrupt() irq(void)
 {
-    if( INTCONbits.T0IE && INTCONbits.T0IF )
-    {
-        INTCONbits.T0IF = 0;
-        intt0_1ms();
-    }
+    INT_TIMER_0();
 }
 
 
