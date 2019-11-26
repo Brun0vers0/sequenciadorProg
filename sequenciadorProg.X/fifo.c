@@ -66,5 +66,5 @@ void resetFIFO (void)
 
 void restartFIFO (void)
 {
-        fifoTail = 0;         
+    fifoTail = 0;         
 }

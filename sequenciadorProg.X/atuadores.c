@@ -1,8 +1,8 @@
 
 #include <xc.h>
-#include "config.h"
 #include "atuadores.h"
-#include "serialIO.h"
 
+SENSORESbits_t sensor;
+ATUADORESbits_t atuador;
 
 

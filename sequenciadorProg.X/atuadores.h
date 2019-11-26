@@ -36,5 +36,10 @@ typedef union
     };
 } SENSORESbits_t;
 
+
+
+extern SENSORESbits_t sensor;
+extern ATUADORESbits_t atuador;
+
 #endif	/* ATUADORES_H */
 
