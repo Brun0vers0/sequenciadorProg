@@ -8,6 +8,10 @@
 #ifndef EXIBESEQ_H
 #define	EXIBESEQ_H
 
+void exibeEdicao( void );
+void telaEdicao( void );
+void exibeExec( void );
+void telaExecut( void );
 
 #endif	/* EXIBESEQ_H */
 

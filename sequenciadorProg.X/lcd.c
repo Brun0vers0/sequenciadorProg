@@ -110,7 +110,7 @@ int checktecla (void)
 {
     char linha2[17] = "      [  ]      ";
     char aux;
-            for( char i=0; i<indPassosSize; i++ )
+    for( char i=0; i<indPassosSize; i++ )
     {
         aux = getFIFO();
         if(aux>= '0' && aux<= '9')
@@ -130,6 +130,7 @@ int checktecla (void)
         }
             writeLCD(0,1,linha2);
     }
+    return( aux );
 }
 
 void screen_car (void)

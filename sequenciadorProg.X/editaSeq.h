@@ -8,6 +8,7 @@
 #ifndef EDITASEQ_H
 #define	EDITASEQ_H
 
+void editaSeqScan( unsigned char t );
 
 #endif	/* EDITASEQ_H */
 

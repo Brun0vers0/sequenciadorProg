@@ -60,29 +60,84 @@ void __interrupt() irq(void)
 void main(void)
 {
     unsigned char tecla = 0;
-
+    unsigned char estado = 1;
     initLCD(); 
     screen_car();
     initKeyboard();
     initSerialIO(  &sensor, &atuador, 1 );
     //atuador.ABCD = 0x00; 
     initTimer0();
-    
+
+
     while( 1 )                      // Laço de repetição infinita.
     {
-//      checktecla ();
-//        screen_menu ();
         keyboardScan();
-
+        tecla = 0;
         if( currentKey() && !previousKey() )
         {
             tecla = currentKey();
         }
 
+        switch( estado )
+        {
+            case 0:
+                    estado = 100;
+                    break;
+            case 1:
+                    telaEdicao();
+                    estado = 0;
+                    break;
+                    
+            case 100: // Modo edição
+                    if( tecla == '#')
+                    {
+                        estado = 200;
+                        telaExecut();
+                        exibeExec();
+                    }
+                    else if( tecla != 0 )
+                    {
+                        editaSeqScan( tecla );
+                        estado = 101;
+                    }
+                    break;
+            case 101:
+                    exibeEdicao();
+                    estado = 100;
+                    break;
 
-
-
-        executaSeqScan();
+            case 200: // Modo execução
+                    if( tecla == '0' )
+                    {
+                        telaEdicao();
+                        estado = 100;
+                    }
+                    else if( tecla == '#' )
+                    {
+                        executarSeq();
+                        estado = 201;
+                    }
+                    break;
+            case 201:
+                    if( fimSeq() )
+                    {
+                        estado = 200;
+                        exibeExec();
+                    }
+                    else
+                    {
+                        if( tecla == '*' )
+                            executarPauseStopSeq();
+                        else if( tecla == '#' )
+                            executarSeqRestart();
+                    
+                        if( printExec() )
+                            exibeExec();
+                        
+                        executaSeqScan();
+                    }
+                    break;
+        }
         serialIOscan();
     }
 }

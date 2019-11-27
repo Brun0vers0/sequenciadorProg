@@ -8,4 +8,8 @@ void * displayFIFO( void );
 unsigned char delFIFO( unsigned char n );
 void resetFIFO (void);
 void restartFIFO (void);
+unsigned char getHead( void );
+unsigned char getTail( void );
+unsigned char readFIFO( unsigned char p );
+
 #endif

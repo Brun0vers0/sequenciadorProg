@@ -11,16 +11,11 @@
 
 
 unsigned char a = 0, b = 0, c = 0, d = 0;
-unsigned char seqTecla;
+//unsigned char seqTecla;
 
-void editarSeq( unsigned char t )
-{
-    seqTecla = t;
-}
 
-void editaSeqScan( void )
+void editaSeqScan( unsigned char seqTecla )
 {
-    
     switch( seqTecla )
     {
         case 'A':
@@ -62,10 +57,6 @@ void editaSeqScan( void )
         case '9':
                 putFIFO(seqTecla);
                 break;  
-        case '#':
-                
-                //estado = 10;
-                break;
         case '0':
                 //clearLCD();
                 a = b = c = d = 0;
@@ -88,6 +79,4 @@ void editaSeqScan( void )
                 break;
     }
         //writeLCD(0,1, displayFIFO() );
-    seqTecla = 0;
-    
 }

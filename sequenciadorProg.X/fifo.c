@@ -43,7 +43,6 @@ void * displayFIFO( void )
 {
     return( fifo );
 }   
-
 unsigned char delFIFO( unsigned char n )
 {
     unsigned char ret;
@@ -67,4 +66,21 @@ void resetFIFO (void)
 void restartFIFO (void)
 {
     fifoTail = 0;         
+}
+
+unsigned char getHead( void )
+{
+    return( fifoHead );
+}
+
+unsigned char getTail( void )
+{
+    return( fifoTail );
+}
+unsigned char readFIFO( unsigned char p )
+{
+    if( p < fifoHead )
+        return( fifo[p] );
+    else 
+        return( 0 );
 }

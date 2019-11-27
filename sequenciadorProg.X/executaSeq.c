@@ -14,14 +14,25 @@
 unsigned char execSeq = 0;
 unsigned int passo = 0;
 unsigned int tSeq;
+unsigned char pauseStop = 0;
 
 
 
+void executarPauseStopSeq( void )
+{
+    ++pauseStop;
+}
+
+void executarSeqRestart( void )
+{
+    pauseStop = 0;
+}
 
 void executarSeq( void )
 {
     execSeq = 10;
     restartFIFO();
+    executarSeqRestart();
 }
 
 void resetSeq( void )
@@ -34,21 +45,46 @@ unsigned char fimSeq( void )
     return( !execSeq );
 }
 
+unsigned char printExec( void )
+{
+    if( execSeq == 10 )
+        return( 1 );
+    else
+        return( 0 );
+}
+
 void executaSeqScan( void )
 {
     switch( execSeq )
     {
         case 0:
-                
                 break;
-                
-                
         case 10:
-                passo = getFIFO();
+            if( pauseStop == 0 )
+                execSeq = 14;
+            else if( pauseStop == 1 )
                 execSeq = 11;
+            else
+                execSeq = 12;
+            break;
+        case 11:
+            if( pauseStop == 0 )        // run
+                execSeq = 14;
+            else if( pauseStop > 1 )    // stop
+                execSeq = 12;
+            break;
+        case 12:
+            restartFIFO();
+            resetSeq();
+            execSeq = 0;
+            break;
+        case 14:
+                passo = getFIFO();
+                
+                execSeq = 15;
                 break;
                 
-        case 11:
+        case 15:
                 switch( passo )
                 {
                     case 'A':   execSeq = 100;  break;
@@ -72,7 +108,9 @@ void executaSeqScan( void )
                                 tSeq = (passo - '0') * 1000;
                                 execSeq = 140;
                                 break;
-                    default:    execSeq = 0;    break;
+                    default:    execSeq = 0;    
+                                restartFIFO();
+                                break;
                 }
                 break;
 
