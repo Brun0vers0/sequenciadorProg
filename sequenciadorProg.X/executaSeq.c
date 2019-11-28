@@ -94,7 +94,7 @@ void executaSeqScan( void )
                     case 'a':   execSeq = 230;  break;
                     case 'b':   execSeq = 240;  break;
                     case 'c':   execSeq = 250;  break;
-                    case 'd':   execSeq = 260;  break;
+                    case 'd':   execSeq = 150;  break;
 
                     case '1':   
                     case '2':   
@@ -172,15 +172,14 @@ void executaSeqScan( void )
         case 131:
                 execSeq = 10;
                 break;
-        case 260: // D-
+        case 150: // D-
                 atuador.D = 0;
-                execSeq = 261;
+                execSeq = 151;
                 break;
-        case 261:
+        case 151:
                 execSeq = 10;
-                break;        
-
-        case 140:
+                break;
+        case 140:// temporização 1 - 9 segundos 
                 setT0( tSeq );
                 execSeq = 141;
                 break;
